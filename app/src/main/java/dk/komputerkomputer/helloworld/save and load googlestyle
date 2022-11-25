@@ -1,0 +1,20 @@
+/*   private void saveData() {
+            SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            Gson gson = new Gson();
+            String json = gson.toJson(mExampleList);
+            editor.putString("task list", json);
+            editor.apply();
+        }
+
+        private void loadData() {
+            SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+            Gson gson = new Gson();
+            String json = sharedPreferences.getString("task list", null);
+            Type type = new TypeToken<ArrayList<ExampleItem>>() {}.getType();
+            mExampleList = gson.fromJson(json, type);
+
+            if (mExampleList == null) {
+                mExampleList = new ArrayList<>();
+            }
+          }*/
