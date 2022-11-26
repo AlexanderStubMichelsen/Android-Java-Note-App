@@ -32,33 +32,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //TODO:: complete this
 
-        TextView txtViewDm = findViewById(R.id.textViewDmTwo);
-        TextView txtViewVm = findViewById(R.id.textViewVmTwo);
-        TextView txtViewWm = findViewById(R.id.textViewWmTwo);
-
-        Note note = new Note();
-        ArrayList<String> tempNotes = new ArrayList<>();
-
-       /* try {
-            txtViewDm.setText(load(0));
-        } catch (Exception e) {
+        try {
+            load();
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
-            txtViewVm.setText(load(1));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            txtViewWm.setText(load(2));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
     }
-
-    /*TextView txtViewDm = findViewById(R.id.textViewDmTwo);
-    TextView txtViewVm = findViewById(R.id.textViewVmTwo);
-    TextView txtViewWm = findViewById(R.id.textViewWmTwo);*/
 
     Note note = new Note();
     ArrayList<String> tempNotes = new ArrayList<>();
