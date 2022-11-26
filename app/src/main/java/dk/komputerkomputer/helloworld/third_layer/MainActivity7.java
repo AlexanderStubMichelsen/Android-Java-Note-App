@@ -18,6 +18,8 @@ public class MainActivity7 extends AppCompatActivity {
         setContentView(R.layout.activity_main7);
     }
 
+    private static final String FILE_NAME = "Note-Layer-Three-Space-.txt";
+
     public void enterNoteCollectionSpace (View view) {
         Intent secondActivityIntent = new Intent(this, MainActivity2.class);
         startActivity(secondActivityIntent);

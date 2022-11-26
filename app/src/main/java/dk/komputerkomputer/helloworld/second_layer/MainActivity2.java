@@ -32,7 +32,7 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
     }
 
-    private static final String FILE_NAME = "Note.txt";
+    private static final String FILE_NAME = "Note-Layer-Two-Space-.txt";
 
     Note note = new Note();
     ArrayList<String> tempNotes = new ArrayList<>();

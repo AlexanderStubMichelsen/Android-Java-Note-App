@@ -20,6 +20,9 @@ import java.util.ArrayList;
 import dk.komputerkomputer.helloworld.Note;
 import dk.komputerkomputer.helloworld.R;
 import dk.komputerkomputer.helloworld.first_layer.MainActivity;
+import dk.komputerkomputer.helloworld.third_layer.MainActivity11;
+import dk.komputerkomputer.helloworld.third_layer.MainActivity12;
+import dk.komputerkomputer.helloworld.third_layer.MainActivity13;
 import dk.komputerkomputer.helloworld.third_layer.MainActivity5;
 import dk.komputerkomputer.helloworld.third_layer.MainActivity6;
 import dk.komputerkomputer.helloworld.third_layer.MainActivity7;
@@ -32,7 +35,7 @@ public class MainActivity4 extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
     }
 
-    private static final String FILE_NAME = "Note.txt";
+    private static final String FILE_NAME = "Note-Layer-Two-Space-.txt";
 
     Note note = new Note();
     ArrayList<String> tempNotes = new ArrayList<>();
@@ -44,17 +47,17 @@ public class MainActivity4 extends AppCompatActivity {
     }
 
     public void enterNoteCollectionSpaceMain (View view) {
-        Intent firstActivityIntent = new Intent(this, MainActivity5.class);
+        Intent firstActivityIntent = new Intent(this, MainActivity11.class);
         startActivity(firstActivityIntent);
     }
 
     public void enterNoteCollectionSpaceSecond (View view) {
-        Intent firstActivityIntent = new Intent(this, MainActivity6.class);
+        Intent firstActivityIntent = new Intent(this, MainActivity12.class);
         startActivity(firstActivityIntent);
     }
 
     public void enterNoteCollectionSpaceThird (View view) {
-        Intent firstActivityIntent = new Intent(this, MainActivity7.class);
+        Intent firstActivityIntent = new Intent(this, MainActivity13.class);
         startActivity(firstActivityIntent);
     }
 

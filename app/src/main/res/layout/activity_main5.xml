@@ -19,17 +19,29 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="408dp"
-        android:layout_height="91dp"
+        android:layout_width="406dp"
+        android:layout_height="88dp"
         android:ems="10"
         android:hint="Text"
         android:inputType="textPersonName"
         android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="410dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="668dp"
+        android:onClick="enterNoteCollectionSpace"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
