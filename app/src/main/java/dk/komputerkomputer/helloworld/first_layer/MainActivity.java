@@ -2,17 +2,14 @@ package dk.komputerkomputer.helloworld.first_layer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -32,11 +29,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //TODO:: complete this
 
-        try {
-            load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        load();
+        load2();
+        load3();
     }
 
     Note note = new Note();
@@ -49,33 +44,32 @@ public class MainActivity extends AppCompatActivity {
 
         EditText edtTxt = findViewById(R.id.edtEmTwo);
         //        edtTxt.getText().clear();
-
         try {
             String stringNote = edtTxt.getText().toString();
             tempNotes.add(stringNote);
             note.setNotes(tempNotes);
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }if(load() != null) {
         try {
             txtViewDm.setText(note.getNotes().get(0));
-            save();
+            save("OneOne", note.getNotes().get(0));
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }}else if(load2() != null) {
         try {
             txtViewVm.setText(note.getNotes().get(1));
-            save();
+            save("OneTwo", note.getNotes().get(1));
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }}else if(txtViewWm != null) {
         try {
             txtViewWm.setText(note.getNotes().get(2));
-            save();
+            save("OneThree", note.getNotes().get(2));
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        refreshNotesCount();
+        }}
+//        refreshNotesCount();
     }
 
     //TODO Make Interface
@@ -93,20 +87,20 @@ public class MainActivity extends AppCompatActivity {
             tempNotes.remove(tempNotes.size() - 1);
             note.setNotes(tempNotes);
             txtViewDm.setText("");
-            delete(1);
+//            delete(1);
         }
         if (tempNotes.size() == 2) {
             tempNotes.remove(tempNotes.size() - 1);
             note.setNotes(tempNotes);
             txtViewVm.setText("");
-            delete(2);
+//            delete(2);
 
         }
         if (tempNotes.size() == 3) {
             tempNotes.remove(tempNotes.size() - 1);
             note.setNotes(tempNotes);
             txtViewWm.setText("");
-            delete(3);
+//            delete(3);
         }
 //        refreshNotesCount();
     }
@@ -130,39 +124,39 @@ public class MainActivity extends AppCompatActivity {
 
     public void refreshNotesCount() {
         TextView txtViewDm = findViewById(R.id.textViewDmTwo);
-        TextView txtViewVm = findViewById(R.id.textViewVmTwo);
+        TextView txtViewVm = findViewById(R.id.textViewDmTwo);
         TextView txtViewWm = findViewById(R.id.textViewWmTwo);
 
         TextView txtViewEm = findViewById(R.id.textViewEmTwo);
-        String StandardMessage = "You have a total of " + note.getNotes().size() + " Notes";
-        txtViewEm.setText(StandardMessage);
+//        String StandardMessage = "You have a total of " + note.getNotes().size() + " Notes";
+        String fuckYouSon = "Second note space with " + note.getNotes().size() + " notes";
+        txtViewEm.setText(fuckYouSon);
 
         try {
             txtViewDm.setText(note.getNotes().get(0));
-            save();
+//            save();
         } catch (Exception e) {
             e.printStackTrace();
         }
         try {
             txtViewVm.setText(note.getNotes().get(1));
-            save();
+//            save();
         } catch (Exception e) {
             e.printStackTrace();
         }
         try {
             txtViewWm.setText(note.getNotes().get(2));
-            save();
+//            save();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public String fileName() {
+ /*   public String fileName() {
         String fileName = "Note-Layer-One-Space-.txt";
-        return fileName;
-    }
+        return fileName;*/
 
-    public void save() {
+    /*public void save() {
         String noteArray = note.getNotes().toString();
         FileOutputStream fos = null;
 
@@ -186,17 +180,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void delete(int i) {
+    *//*public void delete(int i) {
         String path = getFilesDir().getAbsolutePath() + "/" + fileName();
         File file = new File(path);
         file.delete();
         Toast.makeText(this, "deleted " + getFilesDir() + "/" + fileName(), Toast.LENGTH_LONG).show();
         refreshNotesCount();
-    }
+    }*//*
 
     public void load() throws IOException {
         TextView txtViewDm = findViewById(R.id.textViewDmTwo);
-        TextView txtViewVm = findViewById(R.id.textViewVmTwo);
+        TextView txtViewVm = findViewById(R.id.textViewDmTwo);
         TextView txtViewWm = findViewById(R.id.textViewWmTwo);
 
         EditText edtTxt = findViewById(R.id.edtEmTwo);
@@ -215,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
                 note.setNotes(arr);
                 fis.close();
             try {
-                txtViewDm.setText(note.getNotes().get(0));
+                txtViewDm.setText(note.getNotes().get(0) + "This was 4 real the right thought");
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -231,6 +225,73 @@ public class MainActivity extends AppCompatActivity {
             }
             refreshNotesCount();
         }
+    }*/
+
+    public void save(String place, String s) {
+           try {
+            FileOutputStream fos = openFileOutput("MainActivity" + place, Context.MODE_PRIVATE);
+            fos.write(s.getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String load() {
+        TextView txtViewDm = findViewById(R.id.textViewDmTwo);
+//        EditText edtEmTwo = findViewById(R.id.edtEmTwo);
+        StringBuffer stringBuffer = null;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivityOneOne")));
+            String inputString;
+            stringBuffer = new StringBuffer();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuffer.append(inputString + "\n");
+            }
+            txtViewDm.setText(stringBuffer.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return stringBuffer.toString();
+    }
+
+    public String load2() {
+        TextView txtViewVm = findViewById(R.id.textViewDmTwo);
+//        EditText edtEmTwo = findViewById(R.id.edtEmTwo);
+        StringBuffer stringBuffer = null;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivityOneTwo")));
+            String inputString;
+            stringBuffer = new StringBuffer();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuffer.append(inputString + "\n");
+            }
+            txtViewVm.setText(stringBuffer.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return stringBuffer.toString();
+    }
+
+    public String load3() {
+        TextView txtViewWm = findViewById(R.id.textViewWmTwo);
+//        EditText edtEmTwo = findViewById(R.id.edtEmTwo);
+        StringBuffer stringBuffer = null;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivityOneThree")));
+            String inputString;
+            stringBuffer = new StringBuffer();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuffer.append(inputString + "\n");
+            }
+            txtViewWm.setText(stringBuffer.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return stringBuffer.toString();
     }
 }
 
