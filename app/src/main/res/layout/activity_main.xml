@@ -20,72 +20,57 @@
         android:textColorHint="#00BCD4"
         android:textSize="20dp" />
 
+    //Longpress
     <EditText
-        android:id="@+id/edtEmTwo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="This is the title for the first note"
-        android:paddingTop="73dp"
-        android:textColor="#00BCD4"
-        android:textColorHint="#00BCD4"
-        android:textSize="20dp" />
-    <!--//Longpress-->
-    <TextView
         android:id="@+id/textViewDmTwo"
+        android:maxLength="20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="NoteSpace: "
-        android:onClick="enterNoteCollectionSpace"
-        android:paddingTop="73dp"
-        android:textColor="#00BCD4"
-        android:textColorHint="#00BCD4"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/textViewVmTwo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="NoteSpace: "
-        android:onClick="enterNoteCollectionSpaceTwo"
-        android:paddingTop="73dp"
-        android:textColor="#00BCD4"
-        android:textColorHint="#00BCD4"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/textViewWmTwo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="NoteSpace: "
-        android:onClick="enterNoteCollectionSpaceThree"
-        android:paddingTop="73dp"
+        android:paddingTop="65dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
         android:textSize="20dp" />
 
     <Button
+        android:id="@+id/button4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="#8E5858"
-        android:backgroundTint="#8C3838"
-        android:hint="ADD NOTE SPACE"
+        android:layout_height="59dp"
         android:onClick="onBtnClick"
-        android:textColorHint="#00BCD4"
-        app:strokeColor="#7E2A2A" />
+        android:text="SAVE" />
 
-
-    <Button
+    <EditText
+        android:id="@+id/textViewVmTwo"
+        android:maxLength="20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="#8E5858"
-        android:backgroundTint="#8C3838"
-        android:hint="DEL LAST NOTE SPACE"
-        android:onClick="deleteLastNote"
+        android:paddingTop="65dp"
+        android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
-        app:strokeColor="#7E2A2A" />/>
+        android:textSize="20dp" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="374dp"
+        android:layout_height="59dp"
+        android:onClick="onBtnClick2"
+        android:text="SAVE" />
+
+    <EditText
+        android:id="@+id/textViewWmTwo"
+        android:maxLength="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="65dp"
+        android:textColor="#00BCD4"
+        android:textColorHint="#00BCD4"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:onClick="onBtnClick3"
+        android:text="SAVE" />
 
     <LinearLayout
         android:layout_width="match_parent"

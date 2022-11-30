@@ -1,13 +1,17 @@
 package dk.komputerkomputer.helloworld.first_layer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
@@ -29,81 +33,87 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //TODO:: complete this
 
-        load();
-        load2();
-        load3();
+
+        try {
+            save("NoteSpace: ");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            save2("NoteSpace: ");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            save3("NoteSpace: ");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            load();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            load2();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            load3();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        EditText editText = findViewById(R.id.textViewVmTwo);
+
+        editText.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
     }
 
-    Note note = new Note();
-    ArrayList<String> tempNotes = new ArrayList<>();
 
     public void onBtnClick(View view) {
-        TextView txtViewDm = findViewById(R.id.textViewDmTwo);
-        TextView txtViewVm = findViewById(R.id.textViewVmTwo);
-        TextView txtViewWm = findViewById(R.id.textViewWmTwo);
+        EditText edtViewTxt = findViewById(R.id.textViewDmTwo);
 
-        EditText edtTxt = findViewById(R.id.edtEmTwo);
-        //        edtTxt.getText().clear();
-        try {
-            String stringNote = edtTxt.getText().toString();
-            tempNotes.add(stringNote);
-            note.setNotes(tempNotes);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }if(load() != null) {
-        try {
-            txtViewDm.setText(note.getNotes().get(0));
-            save("OneOne", note.getNotes().get(0));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }}else if(load2() != null) {
-        try {
-            txtViewVm.setText(note.getNotes().get(1));
-            save("OneTwo", note.getNotes().get(1));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }}else if(txtViewWm != null) {
-        try {
-            txtViewWm.setText(note.getNotes().get(2));
-            save("OneThree", note.getNotes().get(2));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }}
-//        refreshNotesCount();
+        save(edtViewTxt.getText().toString());
+
+    }
+
+    public void onBtnClick2(View view) {
+        EditText edtViewTxt = findViewById(R.id.textViewVmTwo);
+
+        save2(edtViewTxt.toString());
+
+    }
+
+    public void onBtnClick3(View view) {
+        EditText edtViewTxt = findViewById(R.id.textViewWmTwo);
+
+        save3(edtViewTxt.toString());
+
     }
 
     //TODO Make Interface
-
-    public void deleteLastNote(View view) {
-        TextView txtViewDm = findViewById(R.id.textViewDmTwo);
-        TextView txtViewVm = findViewById(R.id.textViewVmTwo);
-        TextView txtViewWm = findViewById(R.id.textViewWmTwo);
-
-        //TODO CONSIDER SWITCH CASE --
-
-        tempNotes = note.getNotes();
-
-        if (tempNotes.size() == 1) {
-            tempNotes.remove(tempNotes.size() - 1);
-            note.setNotes(tempNotes);
-            txtViewDm.setText("");
-//            delete(1);
-        }
-        if (tempNotes.size() == 2) {
-            tempNotes.remove(tempNotes.size() - 1);
-            note.setNotes(tempNotes);
-            txtViewVm.setText("");
-//            delete(2);
-
-        }
-        if (tempNotes.size() == 3) {
-            tempNotes.remove(tempNotes.size() - 1);
-            note.setNotes(tempNotes);
-            txtViewWm.setText("");
-//            delete(3);
-        }
-//        refreshNotesCount();
-    }
 
     //TODO WRITE METHOD REFRESH
 
@@ -122,124 +132,41 @@ public class MainActivity extends AppCompatActivity {
         startActivity(secondActivityIntent);
     }
 
-    public void refreshNotesCount() {
-        TextView txtViewDm = findViewById(R.id.textViewDmTwo);
-        TextView txtViewVm = findViewById(R.id.textViewDmTwo);
-        TextView txtViewWm = findViewById(R.id.textViewWmTwo);
-
-        TextView txtViewEm = findViewById(R.id.textViewEmTwo);
-//        String StandardMessage = "You have a total of " + note.getNotes().size() + " Notes";
-        String fuckYouSon = "Second note space with " + note.getNotes().size() + " notes";
-        txtViewEm.setText(fuckYouSon);
-
-        try {
-            txtViewDm.setText(note.getNotes().get(0));
-//            save();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            txtViewVm.setText(note.getNotes().get(1));
-//            save();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            txtViewWm.setText(note.getNotes().get(2));
-//            save();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
- /*   public String fileName() {
-        String fileName = "Note-Layer-One-Space-.txt";
-        return fileName;*/
-
-    /*public void save() {
-        String noteArray = note.getNotes().toString();
-        FileOutputStream fos = null;
-
-        try {
-            fos = openFileOutput(fileName(), MODE_PRIVATE);
-            fos.write(noteArray.getBytes());
-
-            Toast.makeText(this, "saved to " + getFilesDir() + "/" + fileName(), Toast.LENGTH_LONG).show();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (fos != null) {
-                try {
-                    fos.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    *//*public void delete(int i) {
-        String path = getFilesDir().getAbsolutePath() + "/" + fileName();
-        File file = new File(path);
-        file.delete();
-        Toast.makeText(this, "deleted " + getFilesDir() + "/" + fileName(), Toast.LENGTH_LONG).show();
-        refreshNotesCount();
-    }*//*
-
-    public void load() throws IOException {
-        TextView txtViewDm = findViewById(R.id.textViewDmTwo);
-        TextView txtViewVm = findViewById(R.id.textViewDmTwo);
-        TextView txtViewWm = findViewById(R.id.textViewWmTwo);
-
-        EditText edtTxt = findViewById(R.id.edtEmTwo);
-        //        edtTxt.getText().clear();
-
-        FileInputStream fis;
-
-            fis = openFileInput(fileName());
-            InputStreamReader isr = new InputStreamReader(fis);
-            BufferedReader br = new BufferedReader(isr);
-            ArrayList<String> arr = new ArrayList();
-            String text;
-
-            while ((text = br.readLine()) != null) {
-                arr.add(text);
-                note.setNotes(arr);
-                fis.close();
-            try {
-                txtViewDm.setText(note.getNotes().get(0) + "This was 4 real the right thought");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            try {
-                txtViewVm.setText(note.getNotes().get(1));
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            try {
-                txtViewWm.setText(note.getNotes().get(2));
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            refreshNotesCount();
-        }
-    }*/
-
-    public void save(String place, String s) {
+    public void save(String s) {
            try {
-            FileOutputStream fos = openFileOutput("MainActivity" + place, Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivityOneOne", Context.MODE_PRIVATE);
             fos.write(s.getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+           load();
     }
 
-    public String load() {
-        TextView txtViewDm = findViewById(R.id.textViewDmTwo);
-//        EditText edtEmTwo = findViewById(R.id.edtEmTwo);
+    public void save2(String s) {
+        try {
+            FileOutputStream fos = openFileOutput("MainActivityOneTwo", Context.MODE_PRIVATE);
+            fos.write(s.getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        load2();
+    }
+
+    public void save3(String s) {
+        try {
+            FileOutputStream fos = openFileOutput("MainActivityOneThree", Context.MODE_PRIVATE);
+            fos.write(s.getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        load3();
+    }
+
+    public void load() {
+        EditText edtEmTwo = findViewById(R.id.textViewDmTwo);
         StringBuffer stringBuffer = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -247,18 +174,16 @@ public class MainActivity extends AppCompatActivity {
             String inputString;
             stringBuffer = new StringBuffer();
             while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString + "\n");
+                stringBuffer.append(inputString);
             }
-            txtViewDm.setText(stringBuffer.toString());
+            edtEmTwo.setText(stringBuffer.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return stringBuffer.toString();
     }
 
-    public String load2() {
-        TextView txtViewVm = findViewById(R.id.textViewDmTwo);
-//        EditText edtEmTwo = findViewById(R.id.edtEmTwo);
+    public void load2() {
+        EditText edtEmTwo = findViewById(R.id.textViewVmTwo);
         StringBuffer stringBuffer = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -266,18 +191,16 @@ public class MainActivity extends AppCompatActivity {
             String inputString;
             stringBuffer = new StringBuffer();
             while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString + "\n");
+                stringBuffer.append(inputString);
             }
-            txtViewVm.setText(stringBuffer.toString());
+            edtEmTwo.setText(stringBuffer.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return stringBuffer.toString();
     }
 
-    public String load3() {
-        TextView txtViewWm = findViewById(R.id.textViewWmTwo);
-//        EditText edtEmTwo = findViewById(R.id.edtEmTwo);
+    public void load3() {
+        EditText edtEmTwo = findViewById(R.id.textViewWmTwo);
         StringBuffer stringBuffer = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -285,13 +208,12 @@ public class MainActivity extends AppCompatActivity {
             String inputString;
             stringBuffer = new StringBuffer();
             while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString + "\n");
+                stringBuffer.append(inputString);
             }
-            txtViewWm.setText(stringBuffer.toString());
+            edtEmTwo.setText(stringBuffer.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return stringBuffer.toString();
     }
 }
 
