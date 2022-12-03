@@ -9,7 +9,12 @@
     android:padding="16dp"
     tools:context=".second_layer.MainActivity4">
 
-    //TODO Button Back, Save, Load.
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/notesicon" />
+
     <EditText
         android:id="@+id/edtEmTwo"
         android:layout_width="match_parent"
@@ -19,22 +24,5 @@
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
         android:textSize="20dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="enterNoteFrontPage"
-        android:text="Back"
-        android:translationY="500dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="save"
-        android:text="Save"
-        android:translationX="270dp"
-        android:translationY="450dp" />
 
 </LinearLayout>

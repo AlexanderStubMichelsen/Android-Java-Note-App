@@ -9,68 +9,82 @@
     android:padding="16dp"
     tools:context=".first_layer.MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/notesicon" />
 
-    <TextView
-        android:id="@+id/textViewEmTwo"
+    <EditText
+        android:id="@+id/textView1mTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="20"
+        android:paddingTop="60dp"
+        android:text="uoboug"
+        android:textColor="#00BCD4"
+        android:textColorHint="#00BCD4"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/textView2mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="This is an App for organized notes"
-        android:paddingTop="73dp"
+        android:paddingTop="60dp"
         android:textColor="@color/purple_500"
         android:textColorHint="#00BCD4"
         android:textSize="20dp" />
 
-    //Longpress
     <EditText
-        android:id="@+id/textViewDmTwo"
-        android:maxLength="20"
+        android:id="@+id/textView3mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="65dp"
+        android:maxLength="20"
+        android:paddingTop="60dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
         android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:onClick="onBtnClick"
-        android:text="SAVE" />
-
     <EditText
-        android:id="@+id/textViewVmTwo"
-        android:maxLength="20"
+        android:id="@+id/textView4mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="65dp"
+        android:maxLength="20"
+        android:paddingTop="60dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
         android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="374dp"
-        android:layout_height="59dp"
-        android:onClick="onBtnClick2"
-        android:text="SAVE" />
-
     <EditText
-        android:id="@+id/textViewWmTwo"
-        android:maxLength="20"
+        android:id="@+id/textView5mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="65dp"
+        android:maxLength="20"
+        android:paddingTop="60dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
         android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/button5"
+    <EditText
+        android:id="@+id/textView6mTwo"
         android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:onClick="onBtnClick3"
-        android:text="SAVE" />
+        android:layout_height="wrap_content"
+        android:maxLength="20"
+        android:paddingTop="60dp"
+        android:textColor="#00BCD4"
+        android:textColorHint="#00BCD4"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/textView7mTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="20"
+        android:paddingTop="60dp"
+        android:textColor="#00BCD4"
+        android:textColorHint="#00BCD4"
+        android:textSize="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
