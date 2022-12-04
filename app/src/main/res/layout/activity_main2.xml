@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4A4545"
-    android:onClick="enterNoteFrontPage"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".second_layer.MainActivity2">
@@ -20,7 +19,6 @@
         android:id="@+id/edtEmTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="This is the title for the first note"
         android:paddingTop="73dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"

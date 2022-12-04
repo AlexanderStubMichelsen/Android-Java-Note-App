@@ -21,7 +21,6 @@
         android:layout_height="wrap_content"
         android:maxLength="20"
         android:paddingTop="60dp"
-        android:text="uoboug"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
         android:textSize="20dp" />
@@ -30,7 +29,6 @@
         android:id="@+id/textView2mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="This is an App for organized notes"
         android:paddingTop="60dp"
         android:textColor="@color/purple_500"
         android:textColorHint="#00BCD4"

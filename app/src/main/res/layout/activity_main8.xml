@@ -19,7 +19,6 @@
         android:id="@+id/edtEmTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="This is the title for the first note"
         android:paddingTop="73dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
