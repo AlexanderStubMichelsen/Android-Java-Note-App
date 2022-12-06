@@ -69,11 +69,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-       /* try {
+        try {
             load7();
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
+        }
 
         EditText editText = findViewById(R.id.textView1mTwo);
         EditText editText2 = findViewById(R.id.textView2mTwo);
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         EditText editText4 = findViewById(R.id.textView4mTwo);
         EditText editText5 = findViewById(R.id.textView5mTwo);
         EditText editText6 = findViewById(R.id.textView6mTwo);
-//        EditText editText7 = findViewById(R.id.textView7mTwo);
+        EditText editText7 = findViewById(R.id.textView7mTwo);
 
 
         //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
@@ -344,7 +344,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*editText7.addTextChangedListener(new TextWatcher() {
+        editText7.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -385,7 +385,7 @@ public class MainActivity extends AppCompatActivity {
                 gestureDetector.onTouchEvent(event);
                 return false;
             }
-        });*/
+        });
     }
 
     //TODO Make Interface
@@ -495,7 +495,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*public void save7() {
+    public void save7() {
         EditText edtEmTwo = findViewById(R.id.textView7mTwo);
         try {
             FileOutputStream fos = openFileOutput("MainActivity17", Context.MODE_PRIVATE);
@@ -504,7 +504,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
     public void load() {
         EditText edtEmTwo = findViewById(R.id.textView1mTwo);
@@ -608,7 +608,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*public void load7() {
+    public void load7() {
         EditText edtEmTwo = findViewById(R.id.textView7mTwo);
         StringBuffer stringBuffer = null;
         try {
@@ -623,6 +623,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 }
 
