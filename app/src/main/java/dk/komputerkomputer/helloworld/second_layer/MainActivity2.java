@@ -43,8 +43,8 @@ public class MainActivity2 extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
                 save();
+                Toast.makeText(getApplicationContext(), "Save", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -87,10 +87,10 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void save() {
         EditText edtEmTwo = findViewById(R.id.edtEmTwo);
-        edtEmTwo.setText(edtEmTwo.getText());
+        String text = edtEmTwo.getText().toString();
         try {
             FileOutputStream fos = openFileOutput("MainActivity2", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.write(text.getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
