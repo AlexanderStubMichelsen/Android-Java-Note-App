@@ -4,41 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4A4545"
+    android:background="@drawable/wp2499812"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".first_layer.MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/notesicon" />
 
     <EditText
         android:id="@+id/textView1mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLength="20"
+        android:maxLength="28"
         android:paddingTop="60dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
         android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/textView2mTwo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="60dp"
-            android:textColor="@color/purple_500"
-            android:textColorHint="#00BCD4"
-            android:textSize="20dp" />
+    <EditText
+        android:id="@+id/textView2mTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="28"
+        android:paddingTop="60dp"
+        android:textColor="#00BCD4"
+        android:textColorHint="#00BCD4"
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/textView3mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLength="20"
+        android:maxLength="28"
         android:paddingTop="60dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
@@ -48,7 +43,7 @@
         android:id="@+id/textView4mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLength="20"
+        android:maxLength="28"
         android:paddingTop="60dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
@@ -58,7 +53,7 @@
         android:id="@+id/textView5mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLength="20"
+        android:maxLength="28"
         android:paddingTop="60dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
@@ -68,7 +63,7 @@
         android:id="@+id/textView6mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLength="20"
+        android:maxLength="28"
         android:paddingTop="60dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
@@ -78,7 +73,7 @@
         android:id="@+id/textView7mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLength="20"
+        android:maxLength="28"
         android:paddingTop="60dp"
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
