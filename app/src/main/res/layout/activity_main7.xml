@@ -14,8 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="73dp"
-        android:textColor="#00BCD4"
-        android:textColorHint="#00BCD4"
+        android:textColor="#ff0000"
+        android:textColorHint="#ff0000"
         android:textSize="20dp" />
 
 </LinearLayout>
