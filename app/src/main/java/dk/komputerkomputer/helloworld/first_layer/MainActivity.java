@@ -27,6 +27,7 @@ import dk.komputerkomputer.helloworld.second_layer.MainActivity5;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
 
+@SuppressWarnings("FieldMayBeFinal")
 public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("ClickableViewAccessibility")

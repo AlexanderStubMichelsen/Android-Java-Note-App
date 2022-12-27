@@ -19,12 +19,11 @@ import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
-import dk.komputerkomputer.helloworld.Note;
 import dk.komputerkomputer.helloworld.R;
 import dk.komputerkomputer.helloworld.first_layer.MainActivity;
 
+@SuppressWarnings("FieldMayBeFinal")
 public class MainActivity2 extends AppCompatActivity {
 
     @SuppressLint("ClickableViewAccessibility")
