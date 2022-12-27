@@ -101,15 +101,16 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void load() {
         EditText edtEmTwo = findViewById(R.id.edtEmTwo);
+        StringBuilder stringBuilder = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity2")));
             String inputString;
-            StringBuffer stringBuffer = new StringBuffer();
+            stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString + "\n");
+                stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuffer.toString());
+            edtEmTwo.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }

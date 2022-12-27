@@ -530,16 +530,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void load6() {
         EditText edtEmTwo = findViewById(R.id.textView6mTwo);
-        StringBuffer stringBuffer = null;
+        StringBuilder stringBuilder = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity16")));
             String inputString;
-            stringBuffer = new StringBuffer();
+            stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
+                stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuffer.toString());
+            edtEmTwo.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
