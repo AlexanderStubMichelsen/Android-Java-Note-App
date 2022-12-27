@@ -43,7 +43,7 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 save();
-                Toast.makeText(getApplicationContext(), "Save", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "Save", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -57,14 +57,14 @@ public class MainActivity3 extends AppCompatActivity {
 
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
                     enterNoteFrontPage();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
                     enterNoteFrontPage();
                     return super.onDoubleTap(e);
                 }

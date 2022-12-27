@@ -12,6 +12,7 @@
         android:id="@+id/edtEmTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxLength="99"
         android:paddingTop="73dp"
         android:textColor="#ff0000"
         android:textColorHint="#ff0000"
