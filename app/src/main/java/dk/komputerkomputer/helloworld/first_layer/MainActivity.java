@@ -13,16 +13,12 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
-import dk.komputerkomputer.helloworld.Note;
 import dk.komputerkomputer.helloworld.R;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity2;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity3;
@@ -30,7 +26,6 @@ import dk.komputerkomputer.helloworld.second_layer.MainActivity4;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity5;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity8;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -75,11 +70,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        try {
-            load7();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         EditText editText = findViewById(R.id.textView1mTwo);
         EditText editText2 = findViewById(R.id.textView2mTwo);
@@ -87,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
         EditText editText4 = findViewById(R.id.textView4mTwo);
         EditText editText5 = findViewById(R.id.textView5mTwo);
         EditText editText6 = findViewById(R.id.textView6mTwo);
-        EditText editText7 = findViewById(R.id.textView7mTwo);
 
 
         //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
@@ -349,49 +338,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-        editText7.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save7();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        editText7.setOnTouchListener(new View.OnTouchListener() {
-            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
-
-                @Override
-                public void onLongPress(@NonNull MotionEvent e) {
-//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace7();
-                    super.onLongPress(e);
-                }
-
-                @Override
-                public boolean onDoubleTap(@NonNull MotionEvent e) {
-//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace7();
-                    return super.onDoubleTap(e);
-                }
-            });
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return false;
-            }
-        });
     }
 
     //TODO Make Interface
@@ -427,11 +373,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void enterNoteCollectionSpace6() {
         Intent secondActivityIntent = new Intent(this, MainActivity7.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNoteCollectionSpace7() {
-        Intent secondActivityIntent = new Intent(this, MainActivity8.class);
         startActivity(secondActivityIntent);
     }
 
@@ -494,17 +435,6 @@ public class MainActivity extends AppCompatActivity {
         EditText edtEmTwo = findViewById(R.id.textView6mTwo);
         try {
             FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save7() {
-        EditText edtEmTwo = findViewById(R.id.textView7mTwo);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity17", Context.MODE_PRIVATE);
             fos.write(edtEmTwo.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -603,23 +533,6 @@ public class MainActivity extends AppCompatActivity {
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity16")));
-            String inputString;
-            stringBuffer = new StringBuffer();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
-            }
-            edtEmTwo.setText(stringBuffer.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load7() {
-        EditText edtEmTwo = findViewById(R.id.textView7mTwo);
-        StringBuffer stringBuffer = null;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity17")));
             String inputString;
             stringBuffer = new StringBuffer();
             while ((inputString = inputReader.readLine()) != null) {

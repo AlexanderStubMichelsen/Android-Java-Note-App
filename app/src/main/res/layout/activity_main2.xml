@@ -17,7 +17,7 @@
         android:maxLength="99"
         android:paddingTop="73sp"
         android:textColor="#ff0000"
-        android:hint="Note"
+        android:hint="@string/Note"
         android:textColorHint="#ff0000"
         android:textSize="20sp" />
 
