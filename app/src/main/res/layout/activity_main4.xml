@@ -6,7 +6,8 @@
     android:background="@drawable/wp2499812"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".second_layer.MainActivity4">
+    tools:context=".second_layer.MainActivity4"
+    tools:ignore="Overdraw">
 
     <EditText
         android:id="@+id/edtEmTwo"
