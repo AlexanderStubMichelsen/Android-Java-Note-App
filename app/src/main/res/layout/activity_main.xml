@@ -14,8 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLength="28"
-        android:paddingTop="60dp"
+        android:paddingTop="60sp"
         android:textColor="#ff0000"
+        android:hint="NoteTitle"
         android:textColorHint="#ff0000"
         android:textSize="20dp" />
 
@@ -24,38 +25,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLength="28"
-        android:paddingTop="60dp"
+        android:paddingTop="60sp"
         android:textColor="#ff0000"
+        android:hint="NoteTitle"
         android:textColorHint="#ff0000"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/textView3mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLength="28"
-        android:paddingTop="60dp"
+        android:paddingTop="60sp"
         android:textColor="#ff0000"
+        android:hint="NoteTitle"
         android:textColorHint="#ff0000"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/textView4mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLength="28"
-        android:paddingTop="60dp"
+        android:paddingTop="60sp"
         android:textColor="#ff0000"
+        android:hint="NoteTitle"
         android:textColorHint="#ff0000"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/textView5mTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLength="28"
-        android:paddingTop="60dp"
+        android:paddingTop="60sp"
         android:textColor="#ff0000"
+        android:hint="NoteTitle"
         android:textColorHint="#ff0000"
         android:textSize="20dp" />
 
@@ -66,6 +71,7 @@
         android:maxLength="28"
         android:paddingTop="60dp"
         android:textColor="#ff0000"
+        android:hint="NoteTitle"
         android:textColorHint="#ff0000"
         android:textSize="20dp" />
 
@@ -76,6 +82,7 @@
         android:maxLength="28"
         android:paddingTop="60dp"
         android:textColor="#ff0000"
+        android:hint="NoteTitle"
         android:textColorHint="#ff0000"
         android:textSize="20dp" />
 

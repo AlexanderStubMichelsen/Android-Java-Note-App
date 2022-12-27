@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="73dp"
         android:maxLength="99"
-
         android:textColor="#ff0000"
+        android:hint="Note"
         android:textColorHint="#ff0000"
         android:textSize="20dp" />
 
