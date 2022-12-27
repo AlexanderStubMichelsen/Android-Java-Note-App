@@ -27,7 +27,7 @@ import dk.komputerkomputer.helloworld.second_layer.MainActivity5;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
 
-@SuppressWarnings("FieldMayBeFinal")
+@SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("ClickableViewAccessibility")
@@ -445,16 +445,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void load() {
         EditText edtEmTwo = findViewById(R.id.textView1mTwo);
-        StringBuffer stringBuffer = null;
+        StringBuilder stringBuilder = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity11")));
             String inputString;
-            stringBuffer = new StringBuffer();
+            stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
+                stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuffer.toString());
+            edtEmTwo.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -462,16 +462,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void load2() {
         EditText edtEmTwo = findViewById(R.id.textView2mTwo);
-        StringBuffer stringBuffer = null;
+        StringBuilder stringBuilder = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity12")));
             String inputString;
-            stringBuffer = new StringBuffer();
+            stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
+                stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuffer.toString());
+            edtEmTwo.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -479,16 +479,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void load3() {
         EditText edtEmTwo = findViewById(R.id.textView3mTwo);
-        StringBuffer stringBuffer = null;
+        StringBuilder stringBuilder = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity13")));
             String inputString;
-            stringBuffer = new StringBuffer();
+            stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
+                stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuffer.toString());
+            edtEmTwo.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -496,16 +496,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void load4() {
         EditText edtEmTwo = findViewById(R.id.textView4mTwo);
-        StringBuffer stringBuffer = null;
+        StringBuilder stringBuilder = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity14")));
             String inputString;
-            stringBuffer = new StringBuffer();
+            stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
+                stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuffer.toString());
+            edtEmTwo.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -513,16 +513,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void load5() {
         EditText edtEmTwo = findViewById(R.id.textView5mTwo);
-        StringBuffer stringBuffer = null;
+        StringBuilder stringBuilder = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity15")));
             String inputString;
-            stringBuffer = new StringBuffer();
+            stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
+                stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuffer.toString());
+            edtEmTwo.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }

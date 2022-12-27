@@ -13,7 +13,6 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
@@ -23,7 +22,7 @@ import java.io.InputStreamReader;
 import dk.komputerkomputer.helloworld.R;
 import dk.komputerkomputer.helloworld.first_layer.MainActivity;
 
-@SuppressWarnings("FieldMayBeFinal")
+@SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity6 extends AppCompatActivity {
 
     @SuppressLint("ClickableViewAccessibility")

@@ -23,7 +23,7 @@ import java.io.InputStreamReader;
 import dk.komputerkomputer.helloworld.R;
 import dk.komputerkomputer.helloworld.first_layer.MainActivity;
 
-@SuppressWarnings("FieldMayBeFinal")
+@SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity2 extends AppCompatActivity {
 
     @SuppressLint("ClickableViewAccessibility")
