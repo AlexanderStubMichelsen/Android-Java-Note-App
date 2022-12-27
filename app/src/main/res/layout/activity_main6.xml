@@ -12,11 +12,11 @@
         android:id="@+id/edtEmTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="73dp"
+        android:paddingTop="73sp"
         android:textColor="#ff0000"
         android:hint="Note"
         android:textColorHint="#ff0000"
         android:maxLength="99"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
 </LinearLayout>
