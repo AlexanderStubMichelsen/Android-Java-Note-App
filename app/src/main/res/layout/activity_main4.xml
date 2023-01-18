@@ -16,10 +16,10 @@
         android:inputType="text"
         android:autofillHints="Note"
         android:paddingTop="73sp"
-        android:textColor="#ff0000"
+        android:textColor="#0000ff"
         android:hint="@string/Note"
         android:maxLength="99"
-        android:textColorHint="#ff0000"
+        android:textColorHint="#0000ff"
         android:textSize="20sp" />
 
 </LinearLayout>

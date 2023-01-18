@@ -9,6 +9,8 @@
     tools:context=".second_layer.MainActivity7"
     tools:ignore="Overdraw">
 
+    //TODO CHANGE NUMBER OF CHARACTORS
+
     <EditText
         android:id="@+id/edtEmTwo"
         android:layout_width="match_parent"
@@ -16,9 +18,9 @@
         android:inputType="text"
         android:autofillHints="Note"
         android:paddingTop="73sp"
-        android:textColor="#ff0000"
+        android:textColor="#0000ff"
         android:hint="@string/Note"
-        android:textColorHint="#ff0000"
+        android:textColorHint="#0000ff"
         android:maxLength="99"
         android:textSize="20sp" />
 

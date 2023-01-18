@@ -16,9 +16,9 @@
         android:inputType="text"
         android:autofillHints="Note"
         android:paddingTop="73sp"
-        android:textColor="#ff0000"
+        android:textColor="#0000ff"
         android:hint="@string/Note"
-        android:textColorHint="#ff0000"
+        android:textColorHint="#0000ff"
         android:maxLength="99"
         android:textSize="20sp" />
 

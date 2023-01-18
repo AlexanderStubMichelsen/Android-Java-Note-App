@@ -18,9 +18,9 @@
         android:autofillHints="Note"
         android:maxLength="28"
         android:paddingTop="60sp"
-        android:textColor="#ff0000"
+        android:textColor="#0000ff "
         android:hint="@string/Note_title"
-        android:textColorHint="#ff0000"
+        android:textColorHint="#0000ff "
         android:textSize="20sp" />
 
     <EditText
@@ -31,9 +31,9 @@
         android:autofillHints="Note"
         android:maxLength="28"
         android:paddingTop="60sp"
-        android:textColor="#ff0000"
+        android:textColor="#0000ff"
         android:hint="@string/Note_title"
-        android:textColorHint="#ff0000"
+        android:textColorHint="#0000ff"
         android:textSize="20sp" />
 
     <EditText
@@ -44,9 +44,9 @@
         android:autofillHints="Note"
         android:maxLength="28"
         android:paddingTop="60sp"
-        android:textColor="#ff0000"
+        android:textColor="#0000ff"
         android:hint="@string/Note_title"
-        android:textColorHint="#ff0000"
+        android:textColorHint="#0000ff"
         android:textSize="20sp" />
 
     <EditText
@@ -57,9 +57,9 @@
         android:autofillHints="Note"
         android:maxLength="28"
         android:paddingTop="60sp"
-        android:textColor="#ff0000"
+        android:textColor="#0000ff"
         android:hint="@string/Note_title"
-        android:textColorHint="#ff0000"
+        android:textColorHint="#0000ff"
         android:textSize="20sp" />
 
     <EditText
@@ -70,9 +70,9 @@
         android:autofillHints="Note"
         android:maxLength="28"
         android:paddingTop="60sp"
-        android:textColor="#ff0000"
+        android:textColor="#0000ff"
         android:hint="@string/Note_title"
-        android:textColorHint="#ff0000"
+        android:textColorHint="#0000ff"
         android:textSize="20sp" />
 
     <EditText
@@ -83,9 +83,9 @@
         android:autofillHints="Note"
         android:maxLength="28"
         android:paddingTop="60sp"
-        android:textColor="#ff0000"
+        android:textColor="#0000ff"
         android:hint="@string/Note_title"
-        android:textColorHint="#ff0000"
+        android:textColorHint="#0000ff"
         android:textSize="20sp" />
 
 </LinearLayout>

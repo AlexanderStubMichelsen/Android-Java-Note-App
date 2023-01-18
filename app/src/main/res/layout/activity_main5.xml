@@ -17,9 +17,9 @@
         android:autofillHints="Note"
         android:paddingTop="73sp"
         android:maxLength="99"
-        android:textColor="#ff0000"
+        android:textColor="#0000ff"
         android:hint="@string/Note"
-        android:textColorHint="#ff0000"
+        android:textColorHint="#0000ff"
         android:textSize="20sp" />
 
 </LinearLayout>
