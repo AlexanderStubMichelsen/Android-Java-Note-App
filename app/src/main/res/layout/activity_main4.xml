@@ -12,13 +12,13 @@
     <EditText
         android:id="@+id/edtEmTwo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:inputType="text"
         android:autofillHints="Note"
         android:paddingTop="73sp"
         android:textColor="#0000ff"
         android:hint="@string/Note"
-        android:maxLength="99"
+        android:maxLength="364"
         android:textColorHint="#0000ff"
         android:textSize="20sp" />
 
