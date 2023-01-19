@@ -10,7 +10,7 @@
         android:icon="@mipmap/ic_launcher"
         android:versionCode="22"
         android:versionName="2.2"
-        android:label="Athentic notes"
+        android:label="Genuine notes"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld"

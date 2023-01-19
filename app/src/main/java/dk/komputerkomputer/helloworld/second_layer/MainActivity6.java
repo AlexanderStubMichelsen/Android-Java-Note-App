@@ -100,7 +100,7 @@ public class MainActivity6 extends AppCompatActivity {
 
     public void load() {
         EditText edtEmTwo = findViewById(R.id.edtEmTwo);
-        StringBuilder stringBuilder = null;
+        StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity6")));

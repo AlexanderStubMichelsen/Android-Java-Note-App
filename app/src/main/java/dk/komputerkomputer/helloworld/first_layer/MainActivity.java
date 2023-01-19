@@ -18,6 +18,7 @@ import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Objects;
 
 import dk.komputerkomputer.helloworld.R;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity2;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.drawable.ic_baseline_notes_24);
 
         setContentView(R.layout.activity_main);
@@ -445,7 +446,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void load() {
         EditText edtEmTwo = findViewById(R.id.textView1mTwo);
-        StringBuilder stringBuilder = null;
+        StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity11")));
@@ -462,7 +463,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void load2() {
         EditText edtEmTwo = findViewById(R.id.textView2mTwo);
-        StringBuilder stringBuilder = null;
+        StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity12")));
@@ -479,7 +480,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void load3() {
         EditText edtEmTwo = findViewById(R.id.textView3mTwo);
-        StringBuilder stringBuilder = null;
+        StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity13")));
@@ -496,7 +497,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void load4() {
         EditText edtEmTwo = findViewById(R.id.textView4mTwo);
-        StringBuilder stringBuilder = null;
+        StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity14")));
@@ -513,7 +514,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void load5() {
         EditText edtEmTwo = findViewById(R.id.textView5mTwo);
-        StringBuilder stringBuilder = null;
+        StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity15")));
@@ -530,7 +531,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void load6() {
         EditText edtEmTwo = findViewById(R.id.textView6mTwo);
-        StringBuilder stringBuilder = null;
+        StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity16")));
