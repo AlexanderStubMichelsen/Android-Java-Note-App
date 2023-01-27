@@ -12,7 +12,7 @@
     tools:ignore="Overdraw">
 
     <EditText
-        android:id="@+id/textView1mTwo"
+        android:id="@+id/NoteTitle1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -27,7 +27,7 @@
         android:orientation="vertical"/>
 
     <EditText
-        android:id="@+id/textView2mTwo"
+        android:id="@+id/NoteTitle2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -42,7 +42,7 @@
         android:orientation="vertical"/>
 
     <EditText
-        android:id="@+id/textView3mTwo"
+        android:id="@+id/NoteTitle3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -57,7 +57,7 @@
         android:orientation="vertical"/>
 
     <EditText
-        android:id="@+id/textView4mTwo"
+        android:id="@+id/NoteTitle4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -72,7 +72,7 @@
         android:orientation="vertical"/>
 
     <EditText
-        android:id="@+id/textView5mTwo"
+        android:id="@+id/NoteTitle5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -87,7 +87,82 @@
         android:orientation="vertical"/>
 
     <EditText
-        android:id="@+id/textView6mTwo"
+        android:id="@+id/NoteTitle6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:autofillHints="Note"
+        android:maxLength="28"
+        android:paddingTop="20sp"
+        android:textColor="#0000ff"
+        android:hint="@string/Note_title"
+        android:textColorHint="#0000ff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:orientation="vertical"/>
+
+    <EditText
+        android:id="@+id/NoteTitle7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:autofillHints="Note"
+        android:maxLength="28"
+        android:paddingTop="20sp"
+        android:textColor="#0000ff"
+        android:hint="@string/Note_title"
+        android:textColorHint="#0000ff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:orientation="vertical"/>
+
+    <EditText
+        android:id="@+id/NoteTitle8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:autofillHints="Note"
+        android:maxLength="28"
+        android:paddingTop="20sp"
+        android:textColor="#0000ff"
+        android:hint="@string/Note_title"
+        android:textColorHint="#0000ff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:orientation="vertical"/>
+
+    <EditText
+        android:id="@+id/NoteTitle9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:autofillHints="Note"
+        android:maxLength="28"
+        android:paddingTop="20sp"
+        android:textColor="#0000ff"
+        android:hint="@string/Note_title"
+        android:textColorHint="#0000ff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:orientation="vertical"/>
+
+    <EditText
+        android:id="@+id/NoteTitle10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:autofillHints="Note"
+        android:maxLength="28"
+        android:paddingTop="20sp"
+        android:textColor="#0000ff"
+        android:hint="@string/Note_title"
+        android:textColorHint="#0000ff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:orientation="vertical"/>
+
+    <EditText
+        android:id="@+id/NoteTitle11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"

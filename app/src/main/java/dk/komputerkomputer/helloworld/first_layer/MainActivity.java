@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
         EditText NoteTitle11 = findViewById(R.id.NoteTitle6);
 
 
-
         //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
 
         NoteTitle1.addTextChangedListener(new TextWatcher() {
@@ -113,14 +112,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace();
+                    enterNoteCollectionSpace1();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace();
+                    enterNoteCollectionSpace1();
                     return super.onDoubleTap(e);
                 }
             });
@@ -371,14 +370,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace7();
+//                    enterNoteCollectionSpace7();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace7();
+//                    enterNoteCollectionSpace7();
                     return super.onDoubleTap(e);
                 }
             });
@@ -414,14 +413,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace8();
+//                    enterNoteCollectionSpace8();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace8();
+//                    enterNoteCollectionSpace8();
                     return super.onDoubleTap(e);
                 }
             });
@@ -456,14 +455,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace9();
+//                    enterNoteCollectionSpace9();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace9();
+//                    enterNoteCollectionSpace9();
                     return super.onDoubleTap(e);
                 }
             });
@@ -498,14 +497,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace10();
+//                    enterNoteCollectionSpace10();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace10();
+//                    enterNoteCollectionSpace10();
                     return super.onDoubleTap(e);
                 }
             });
@@ -540,14 +539,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace11();
+//                    enterNoteCollectionSpace11();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace11();
+//                    enterNoteCollectionSpace11();
                     return super.onDoubleTap(e);
                 }
             });
@@ -560,13 +559,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     //TODO Make Interface
 
     //TODO WRITE METHOD REFRESH
 
     //TODO MAKE SAVE ON LONGPRESS DOUBLETAP WHILST CHANGING SCREEN
 
-    public void enterNoteCollectionSpace() {
+    public void enterNoteCollectionSpace1() {
         Intent secondActivityIntent = new Intent(this, MainActivity2.class);
         startActivity(secondActivityIntent);
     }
@@ -597,7 +597,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save() {
-        EditText edtEmTwo = findViewById(R.id.textView1mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle1);
         try {
             FileOutputStream fos = openFileOutput("MainActivity11", Context.MODE_PRIVATE);
             fos.write(edtEmTwo.getText().toString().getBytes());
@@ -608,7 +608,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save2() {
-        EditText edtEmTwo = findViewById(R.id.textView2mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle2);
         try {
             FileOutputStream fos = openFileOutput("MainActivity12", Context.MODE_PRIVATE);
             fos.write(edtEmTwo.getText().toString().getBytes());
@@ -619,7 +619,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save3() {
-        EditText edtEmTwo = findViewById(R.id.textView3mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle3);
         try {
             FileOutputStream fos = openFileOutput("MainActivity13", Context.MODE_PRIVATE);
             fos.write(edtEmTwo.getText().toString().getBytes());
@@ -630,7 +630,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save4() {
-        EditText edtEmTwo = findViewById(R.id.textView4mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle4);
         try {
             FileOutputStream fos = openFileOutput("MainActivity14", Context.MODE_PRIVATE);
             fos.write(edtEmTwo.getText().toString().getBytes());
@@ -641,7 +641,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save5() {
-        EditText edtEmTwo = findViewById(R.id.textView5mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle5);
         try {
             FileOutputStream fos = openFileOutput("MainActivity15", Context.MODE_PRIVATE);
             fos.write(edtEmTwo.getText().toString().getBytes());
@@ -652,7 +652,62 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save6() {
-        EditText edtEmTwo = findViewById(R.id.textView6mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
+            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save7() {
+        EditText edtEmTwo = findViewById(R.id.NoteTitle7);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
+            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save8() {
+        EditText edtEmTwo = findViewById(R.id.NoteTitle8);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
+            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save9() {
+        EditText edtEmTwo = findViewById(R.id.NoteTitle9);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
+            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save10() {
+        EditText edtEmTwo = findViewById(R.id.NoteTitle10);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
+            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save11() {
+        EditText edtEmTwo = findViewById(R.id.NoteTitle11);
         try {
             FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
             fos.write(edtEmTwo.getText().toString().getBytes());
@@ -663,7 +718,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load() {
-        EditText edtEmTwo = findViewById(R.id.textView1mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle1);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -680,7 +735,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load2() {
-        EditText edtEmTwo = findViewById(R.id.textView2mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle2);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -697,7 +752,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load3() {
-        EditText edtEmTwo = findViewById(R.id.textView3mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle3);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -714,7 +769,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load4() {
-        EditText edtEmTwo = findViewById(R.id.textView4mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle4);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -731,7 +786,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load5() {
-        EditText edtEmTwo = findViewById(R.id.textView5mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle5);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -748,11 +803,96 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load6() {
-        EditText edtEmTwo = findViewById(R.id.textView6mTwo);
+        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity16")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            edtEmTwo.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load7() {
+        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity17")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            edtEmTwo.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load8() {
+        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity18")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            edtEmTwo.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load9() {
+        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity19")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            edtEmTwo.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load10() {
+        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity20")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            edtEmTwo.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load11() {
+        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity21")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
