@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:fillViewport="true"
-    tools:context=".second_layer.MainActivity7"
+    tools:context=".second_layer.MainActivity9"
     tools:ignore="Overdraw">
 
     // TODO change maxLength

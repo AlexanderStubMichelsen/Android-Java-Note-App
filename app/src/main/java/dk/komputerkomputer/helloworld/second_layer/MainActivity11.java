@@ -23,13 +23,13 @@ import dk.komputerkomputer.helloworld.R;
 import dk.komputerkomputer.helloworld.first_layer.MainActivity;
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
-public class MainActivity5 extends AppCompatActivity {
+public class MainActivity11 extends AppCompatActivity {
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.activity_main6);
 
         load();
 
@@ -89,7 +89,7 @@ public class MainActivity5 extends AppCompatActivity {
         EditText edtEmTwo = findViewById(R.id.edtEmTwo);
         String text = edtEmTwo.getText().toString();
         try {
-            FileOutputStream fos = openFileOutput("MainActivity5", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity11", Context.MODE_PRIVATE);
             fos.write(text.getBytes());
             fos.close();
         } catch (Exception e) {
@@ -103,7 +103,7 @@ public class MainActivity5 extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity5")));
+                    openFileInput("MainActivity11")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {

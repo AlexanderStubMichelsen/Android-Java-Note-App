@@ -21,12 +21,12 @@ import java.io.InputStreamReader;
 import java.util.Objects;
 
 import dk.komputerkomputer.helloworld.R;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity1;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity2;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity3;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity4;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity5;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity extends AppCompatActivity {
@@ -567,32 +567,32 @@ public class MainActivity extends AppCompatActivity {
     //TODO MAKE SAVE ON LONGPRESS DOUBLETAP WHILST CHANGING SCREEN
 
     public void enterNote1() {
-        Intent secondActivityIntent = new Intent(this, MainActivity2.class);
+        Intent secondActivityIntent = new Intent(this, MainActivity1.class);
         startActivity(secondActivityIntent);
     }
 
     public void enterNote2() {
-        Intent secondActivityIntent = new Intent(this, MainActivity3.class);
+        Intent secondActivityIntent = new Intent(this, MainActivity2.class);
         startActivity(secondActivityIntent);
     }
 
     public void enterNote3() {
-        Intent secondActivityIntent = new Intent(this, MainActivity4.class);
+        Intent secondActivityIntent = new Intent(this, MainActivity3.class);
         startActivity(secondActivityIntent);
     }
 
     public void enterNote4() {
-        Intent secondActivityIntent = new Intent(this, MainActivity5.class);
+        Intent secondActivityIntent = new Intent(this, MainActivity4.class);
         startActivity(secondActivityIntent);
     }
 
     public void enterNote5() {
-        Intent secondActivityIntent = new Intent(this, MainActivity6.class);
+        Intent secondActivityIntent = new Intent(this, MainActivity5.class);
         startActivity(secondActivityIntent);
     }
 
     public void enterNote6() {
-        Intent secondActivityIntent = new Intent(this, MainActivity7.class);
+        Intent secondActivityIntent = new Intent(this, MainActivity6.class);
         startActivity(secondActivityIntent);
     }
 /*

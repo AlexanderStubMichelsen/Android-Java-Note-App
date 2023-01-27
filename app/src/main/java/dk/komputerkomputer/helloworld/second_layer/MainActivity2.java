@@ -13,7 +13,6 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
@@ -30,7 +29,7 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main6);
 
         load();
 
@@ -59,14 +58,14 @@ public class MainActivity2 extends AppCompatActivity {
 
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
                     enterNoteFrontPage();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
                     enterNoteFrontPage();
                     return super.onDoubleTap(e);
                 }
@@ -82,7 +81,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     //TODO Button Back, Save, Load.
     public void enterNoteFrontPage() {
-        Intent firstActivityIntent = new Intent(this, MainActivity.class);
+        Intent firstActivityIntent = new Intent(this, MainActivity2.class);
         startActivity(firstActivityIntent);
     }
 
