@@ -413,7 +413,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace7();
+                    enterNote7();
                     return super.onDoubleTap(e);
                 }
             });
@@ -449,14 +449,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace8();
+                    enterNote8();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace8();
+                    enterNote8();
                     return super.onDoubleTap(e);
                 }
             });
@@ -491,14 +491,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace9();
+                    enterNote9();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace9();
+                    enterNote9();
                     return super.onDoubleTap(e);
                 }
             });
@@ -533,14 +533,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace10();
+                    enterNote10();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace10();
+                    enterNote10();
                     return super.onDoubleTap(e);
                 }
             });
@@ -575,14 +575,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace11();
+                    enterNote11();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace11();
+                    enterNote11();
                     return super.onDoubleTap(e);
                 }
             });
@@ -617,14 +617,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace11();
+                    enterNote12();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace11();
+                    enterNote12();
                     return super.onDoubleTap(e);
                 }
             });

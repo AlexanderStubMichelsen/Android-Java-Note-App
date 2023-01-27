@@ -1,186 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wp2499812"
+    android:background="@drawable/wp2499814"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:fillViewport="true"
+    android:padding="16dp"
     tools:context=".second_layer.MainActivity8"
     tools:ignore="Overdraw">
 
-    // TODO change maxLength
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:stretchColumns="1">
-
+    <!--    //TODO MAKE NOTE maxLength LONGER-->
     <EditText
-        android:id="@+id/NoteTitle1"
+        android:id="@+id/edtEmTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
         android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="130sp"
-        android:textColor="#0000ff "
-        android:hint="@string/Note_title"
-        android:textColorHint="#0000ff "
-        android:textSize="20sp"
+        android:hint="@string/Note"
+        android:inputType="textMultiLine"
+        android:lines="24"
+        android:gravity="start"
+        android:paddingTop="73sp"
+        android:padding="8dp"
         android:textStyle="bold"
-        android:orientation="vertical"/>
-
-    <EditText
-        android:id="@+id/NoteTitle2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="20sp"
+        android:singleLine="false"
         android:textColor="#0000ff"
-        android:hint="@string/Note_title"
         android:textColorHint="#0000ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:orientation="vertical"/>
+        android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/NoteTitle3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="20sp"
-        android:textColor="#0000ff"
-        android:hint="@string/Note_title"
-        android:textColorHint="#0000ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:orientation="vertical"/>
 
-    <EditText
-        android:id="@+id/NoteTitle4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="20sp"
-        android:textColor="#0000ff"
-        android:hint="@string/Note_title"
-        android:textColorHint="#0000ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:orientation="vertical"/>
 
-    <EditText
-        android:id="@+id/NoteTitle5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="20sp"
-        android:textColor="#0000ff"
-        android:hint="@string/Note_title"
-        android:textColorHint="#0000ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:orientation="vertical"/>
-
-    <EditText
-        android:id="@+id/NoteTitle6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="20sp"
-        android:textColor="#0000ff"
-        android:hint="@string/Note_title"
-        android:textColorHint="#0000ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:orientation="vertical"/>
-
-    <EditText
-        android:id="@+id/NoteTitle7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="20sp"
-        android:textColor="#0000ff"
-        android:hint="@string/Note_title"
-        android:textColorHint="#0000ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:orientation="vertical"/>
-
-    <EditText
-        android:id="@+id/NoteTitle8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="20sp"
-        android:textColor="#0000ff"
-        android:hint="@string/Note_title"
-        android:textColorHint="#0000ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:orientation="vertical"/>
-
-    <EditText
-        android:id="@+id/NoteTitle9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="20sp"
-        android:textColor="#0000ff"
-        android:hint="@string/Note_title"
-        android:textColorHint="#0000ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:orientation="vertical"/>
-
-    <EditText
-        android:id="@+id/NoteTitle10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="20sp"
-        android:textColor="#0000ff"
-        android:hint="@string/Note_title"
-        android:textColorHint="#0000ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:orientation="vertical"/>
-
-    <EditText
-        android:id="@+id/NoteTitle11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:autofillHints="Note"
-        android:maxLength="28"
-        android:paddingTop="20sp"
-        android:textColor="#0000ff"
-        android:hint="@string/Note_title"
-        android:textColorHint="#0000ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:orientation="vertical"/>
-    </TableLayout>
-</ScrollView>
+</LinearLayout>
