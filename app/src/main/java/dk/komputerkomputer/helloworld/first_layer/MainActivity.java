@@ -112,14 +112,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace1();
+                    enterNote1();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace1();
+                    enterNote1();
                     return super.onDoubleTap(e);
                 }
             });
@@ -155,14 +155,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace2();
+                    enterNote2();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace2();
+                    enterNote2();
                     return super.onDoubleTap(e);
                 }
             });
@@ -198,14 +198,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace3();
+                    enterNote3();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace3();
+                    enterNote3();
                     return super.onDoubleTap(e);
                 }
             });
@@ -241,14 +241,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace4();
+                    enterNote4();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace4();
+                    enterNote4();
                     return super.onDoubleTap(e);
                 }
             });
@@ -284,14 +284,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace5();
+                    enterNote5();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace5();
+                    enterNote5();
                     return super.onDoubleTap(e);
                 }
             });
@@ -327,14 +327,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace6();
+                    enterNote6();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace6();
+                    enterNote6();
                     return super.onDoubleTap(e);
                 }
             });
@@ -566,35 +566,60 @@ public class MainActivity extends AppCompatActivity {
 
     //TODO MAKE SAVE ON LONGPRESS DOUBLETAP WHILST CHANGING SCREEN
 
-    public void enterNoteCollectionSpace1() {
+    public void enterNote1() {
         Intent secondActivityIntent = new Intent(this, MainActivity2.class);
         startActivity(secondActivityIntent);
     }
 
-    public void enterNoteCollectionSpace2() {
+    public void enterNote2() {
         Intent secondActivityIntent = new Intent(this, MainActivity3.class);
         startActivity(secondActivityIntent);
     }
 
-    public void enterNoteCollectionSpace3() {
+    public void enterNote3() {
         Intent secondActivityIntent = new Intent(this, MainActivity4.class);
         startActivity(secondActivityIntent);
     }
 
-    public void enterNoteCollectionSpace4() {
+    public void enterNote4() {
         Intent secondActivityIntent = new Intent(this, MainActivity5.class);
         startActivity(secondActivityIntent);
     }
 
-    public void enterNoteCollectionSpace5() {
+    public void enterNote5() {
         Intent secondActivityIntent = new Intent(this, MainActivity6.class);
         startActivity(secondActivityIntent);
     }
 
-    public void enterNoteCollectionSpace6() {
+    public void enterNote6() {
         Intent secondActivityIntent = new Intent(this, MainActivity7.class);
         startActivity(secondActivityIntent);
     }
+/*
+    public void enterNote7() {
+        Intent secondActivityIntent = new Intent(this, MainActivity8.class);
+        startActivity(secondActivityIntent);
+    }
+
+    public void enterNote8() {
+        Intent secondActivityIntent = new Intent(this, MainActivity9.class);
+        startActivity(secondActivityIntent);
+    }
+
+    public void enterNote9() {
+        Intent secondActivityIntent = new Intent(this, MainActivity10.class);
+        startActivity(secondActivityIntent);
+    }
+
+    public void enterNote10() {
+        Intent secondActivityIntent = new Intent(this, MainActivity11.class);
+        startActivity(secondActivityIntent);
+    }
+
+    public void enterNote11() {
+        Intent secondActivityIntent = new Intent(this, MainActivity12.class);
+        startActivity(secondActivityIntent);
+    }*/
 
     public void save() {
         EditText edtEmTwo = findViewById(R.id.NoteTitle1);
