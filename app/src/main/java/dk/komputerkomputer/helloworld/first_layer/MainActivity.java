@@ -85,12 +85,12 @@ public class MainActivity extends AppCompatActivity {
         EditText NoteTitle4 = findViewById(R.id.NoteTitle4);
         EditText NoteTitle5 = findViewById(R.id.NoteTitle5);
         EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
-        EditText NoteTitle7 = findViewById(R.id.NoteTitle6);
-        EditText NoteTitle8 = findViewById(R.id.NoteTitle6);
-        EditText NoteTitle9 = findViewById(R.id.NoteTitle6);
-        EditText NoteTitle10 = findViewById(R.id.NoteTitle6);
-        EditText NoteTitle11 = findViewById(R.id.NoteTitle6);
-
+        EditText NoteTitle7 = findViewById(R.id.NoteTitle7);
+        EditText NoteTitle8 = findViewById(R.id.NoteTitle8);
+        EditText NoteTitle9 = findViewById(R.id.NoteTitle9);
+        EditText NoteTitle10 = findViewById(R.id.NoteTitle10);
+        EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
+        EditText NoteTitle12 = findViewById(R.id.NoteTitle12);
 
         //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
 
@@ -563,6 +563,48 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+        NoteTitle12.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save12();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle12.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+//                    enterNoteCollectionSpace11();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+//                    enterNoteCollectionSpace11();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
     }
 
 
@@ -753,6 +795,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void save12() {
+        EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity12", Context.MODE_PRIVATE);
+            fos.write(NoteTitle11.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void load1() {
         EditText NoteTitle1 = findViewById(R.id.NoteTitle1);
         StringBuilder stringBuilder;
@@ -929,6 +982,23 @@ public class MainActivity extends AppCompatActivity {
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput("MainActivity11")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            NoteTitle11.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load12() {
+        EditText NoteTitle11 = findViewById(R.id.NoteTitle6);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity12")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {

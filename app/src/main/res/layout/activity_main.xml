@@ -182,5 +182,20 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:orientation="vertical"/>
+
+        <EditText
+            android:id="@+id/NoteTitle12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:autofillHints="Note"
+            android:maxLength="28"
+            android:paddingTop="20sp"
+            android:textColor="#0000ff"
+            android:hint="@string/Note_title"
+            android:textColorHint="#0000ff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:orientation="vertical"/>
     </TableLayout>
 </ScrollView>
