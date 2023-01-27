@@ -11,12 +11,13 @@
 
 
 <!--    //TODO MAKE NOTE maxLength LONGER-->
+    <!--    //TODO Describe which note you are presently in, maybe headline above it all-->
     <EditText
         android:id="@+id/note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="Note"
-        android:hint="@string/Note"
+        android:hint="@string/Note_1"
         android:inputType="textMultiLine"
         android:lines="24"
         android:gravity="start"

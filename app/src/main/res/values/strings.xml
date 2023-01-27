@@ -1,5 +1,39 @@
 <resources>
-    <string name="Note_title">Note title</string>
-    <string name="Note">Note</string>
+    <string name="Note_title_1">Note title 1</string>
+    <string name="Note_title_2">Note title 2</string>
+    <string name="Note_title_3">Note title 3</string>
+    <string name="Note_title_4">Note title 4</string>
+    <string name="Note_title_5">Note title 5</string>
+    <string name="Note_title_6">Note title 6</string>
+    <string name="Note_title_7">Note title 7</string>
+    <string name="Note_title_8">Note title 8</string>
+    <string name="Note_title_9">Note title 9</string>
+    <string name="Note_title_10">Note title 10</string>
+    <string name="Note_title_11">Note title 11</string>
+    <string name="Note_title_12">Note title 12</string>
+    <string name="Note_title_13">Note title 13</string>
+    <string name="Note_title_14">Note title 14</string>
+    <string name="Note_title_15">Note title 15</string>
+    <string name="Note_title_16">Note title 16</string>
+    <string name="Note_title_17">Note title 17</string>
+    <string name="Note_title_18">Note title 18</string>
+    <string name="Note_1">Note 1</string>
+    <string name="Note_2">Note 2</string>
+    <string name="Note_3">Note 3</string>
+    <string name="Note_4">Note 4</string>
+    <string name="Note_5">Note 5</string>
+    <string name="Note_6">Note 6</string>
+    <string name="Note_7">Note 7</string>
+    <string name="Note_8">Note 8</string>
+    <string name="Note_9">Note 9</string>
+    <string name="Note_10">Note 10</string>
+    <string name="Note_11">Note 11</string>
+    <string name="Note_12">Note 12</string>
+    <string name="Note_13">Note 13</string>
+    <string name="Note_14">Note 14</string>
+    <string name="Note_15">Note 15</string>
+    <string name="Note_16">Note 16</string>
+    <string name="Note_17">Note 17</string>
+    <string name="Note_18">Note 18</string>
 
 </resources>
