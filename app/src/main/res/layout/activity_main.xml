@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/wp2499812"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="20dp"
+    android:fillViewport="true"
     tools:context=".first_layer.MainActivity"
     tools:ignore="Overdraw">
 
@@ -22,7 +23,8 @@
         android:hint="@string/Note_title"
         android:textColorHint="#0000ff "
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:orientation="vertical"/>
 
     <EditText
         android:id="@+id/textView2mTwo"
@@ -36,7 +38,8 @@
         android:hint="@string/Note_title"
         android:textColorHint="#0000ff"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:orientation="vertical"/>
 
     <EditText
         android:id="@+id/textView3mTwo"
@@ -50,7 +53,8 @@
         android:hint="@string/Note_title"
         android:textColorHint="#0000ff"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:orientation="vertical"/>
 
     <EditText
         android:id="@+id/textView4mTwo"
@@ -64,7 +68,8 @@
         android:hint="@string/Note_title"
         android:textColorHint="#0000ff"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:orientation="vertical"/>
 
     <EditText
         android:id="@+id/textView5mTwo"
@@ -78,7 +83,8 @@
         android:hint="@string/Note_title"
         android:textColorHint="#0000ff"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:orientation="vertical"/>
 
     <EditText
         android:id="@+id/textView6mTwo"
@@ -92,6 +98,7 @@
         android:hint="@string/Note_title"
         android:textColorHint="#0000ff"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:orientation="vertical"/>
 
 </LinearLayout>
