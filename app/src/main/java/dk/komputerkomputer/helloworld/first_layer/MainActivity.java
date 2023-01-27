@@ -406,7 +406,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-//                    enterNoteCollectionSpace7();
+                    enterNote7();
                     super.onLongPress(e);
                 }
 
