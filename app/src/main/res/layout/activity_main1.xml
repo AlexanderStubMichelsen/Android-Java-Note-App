@@ -19,7 +19,7 @@
         android:autofillHints="Note"
         android:hint="@string/Note_1"
         android:inputType="textMultiLine"
-        android:lines="24"
+        android:lines="48"
         android:gravity="start"
         android:paddingTop="73sp"
         android:padding="8dp"
