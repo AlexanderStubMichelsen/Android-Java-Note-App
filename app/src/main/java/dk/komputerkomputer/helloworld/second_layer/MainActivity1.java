@@ -34,8 +34,7 @@ public class MainActivity1 extends AppCompatActivity {
 
         load();
 
-        // TODO change View name in all subclasses to first_layer.MainActivity
-
+// TODO actities does not refer properly to each other and hints do not work properly
         EditText note = findViewById(R.id.note);
 
         note.addTextChangedListener(new TextWatcher() {
