@@ -114,6 +114,36 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        try {
+            load13();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            load14();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            load15();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            load16();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            load17();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            load18();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         EditText NoteTitle1 = findViewById(R.id.NoteTitle1);
         EditText NoteTitle2 = findViewById(R.id.NoteTitle2);
