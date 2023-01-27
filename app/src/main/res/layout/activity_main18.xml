@@ -6,9 +6,11 @@
     android:background="@drawable/wp2499814"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".second_layer.MainActivity2"
+    tools:context=".second_layer.MainActivity18"
     tools:ignore="Overdraw">
 
+
+    <!--    //TODO MAKE NOTE maxLength LONGER-->
     <EditText
         android:id="@+id/note"
         android:layout_width="match_parent"
@@ -25,5 +27,7 @@
         android:textColor="#0000ff"
         android:textColorHint="#0000ff"
         android:textSize="20sp" />
+
+
 
 </LinearLayout>

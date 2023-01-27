@@ -36,9 +36,9 @@ public class MainActivity1 extends AppCompatActivity {
 
         // TODO change View name in all subclasses to first_layer.MainActivity
 
-        EditText edtEmTwo = findViewById(R.id.edtEmTwo);
+        EditText note = findViewById(R.id.note);
 
-        edtEmTwo.addTextChangedListener(new TextWatcher() {
+        note.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -56,7 +56,7 @@ public class MainActivity1 extends AppCompatActivity {
             }
         });
 
-        edtEmTwo.setOnTouchListener(new View.OnTouchListener() {
+        note.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -89,8 +89,8 @@ public class MainActivity1 extends AppCompatActivity {
     }
 
     public void save() {
-        EditText edtEmTwo = findViewById(R.id.edtEmTwo);
-        String text = edtEmTwo.getText().toString();
+        EditText note = findViewById(R.id.note);
+        String text = note.getText().toString();
         try {
             FileOutputStream fos = openFileOutput("MainActivity2", Context.MODE_PRIVATE);
             fos.write(text.getBytes());
@@ -102,7 +102,7 @@ public class MainActivity1 extends AppCompatActivity {
 
 
     public void load() {
-        EditText edtEmTwo = findViewById(R.id.edtEmTwo);
+        EditText note = findViewById(R.id.note);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -112,7 +112,7 @@ public class MainActivity1 extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            note.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
