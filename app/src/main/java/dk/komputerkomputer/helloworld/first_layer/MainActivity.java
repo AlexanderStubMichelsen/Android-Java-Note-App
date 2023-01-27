@@ -25,6 +25,12 @@ import dk.komputerkomputer.helloworld.second_layer.MainActivity1;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity10;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity11;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity12;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity13;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity14;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity15;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity16;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity17;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity18;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity2;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity3;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity4;
@@ -121,6 +127,12 @@ public class MainActivity extends AppCompatActivity {
         EditText NoteTitle10 = findViewById(R.id.NoteTitle10);
         EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
         EditText NoteTitle12 = findViewById(R.id.NoteTitle12);
+        EditText NoteTitle13 = findViewById(R.id.NoteTitle13);
+        EditText NoteTitle14 = findViewById(R.id.NoteTitle14);
+        EditText NoteTitle15 = findViewById(R.id.NoteTitle15);
+        EditText NoteTitle16 = findViewById(R.id.NoteTitle16);
+        EditText NoteTitle17 = findViewById(R.id.NoteTitle17);
+        EditText NoteTitle18 = findViewById(R.id.NoteTitle18);
 
         //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
 
@@ -635,6 +647,264 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        NoteTitle13.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save13();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle13.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNote13();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNote13();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+
+        NoteTitle14.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save14();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle14.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNote14();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNote14();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+
+        NoteTitle15.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save15();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle15.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNote15();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNote15();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+
+        NoteTitle16.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save16();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle16.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNote16();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNote16();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+
+        NoteTitle17.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save17();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle17.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNote17();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNote17();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+
+        NoteTitle18.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save18();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle18.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNote18();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNote18();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
     }
 
 
@@ -701,6 +971,36 @@ public class MainActivity extends AppCompatActivity {
 
     public void enterNote12() {
         Intent secondActivityIntent = new Intent(this, MainActivity12.class);
+        startActivity(secondActivityIntent);
+    }
+
+    public void enterNote13() {
+        Intent secondActivityIntent = new Intent(this, MainActivity13.class);
+        startActivity(secondActivityIntent);
+    }
+
+    public void enterNote14() {
+        Intent secondActivityIntent = new Intent(this, MainActivity14.class);
+        startActivity(secondActivityIntent);
+    }
+
+    public void enterNote15() {
+        Intent secondActivityIntent = new Intent(this, MainActivity15.class);
+        startActivity(secondActivityIntent);
+    }
+
+    public void enterNote16() {
+        Intent secondActivityIntent = new Intent(this, MainActivity16.class);
+        startActivity(secondActivityIntent);
+    }
+
+    public void enterNote17() {
+        Intent secondActivityIntent = new Intent(this, MainActivity17.class);
+        startActivity(secondActivityIntent);
+    }
+
+    public void enterNote18() {
+        Intent secondActivityIntent = new Intent(this, MainActivity18.class);
         startActivity(secondActivityIntent);
     }
 
@@ -830,6 +1130,72 @@ public class MainActivity extends AppCompatActivity {
         try {
             FileOutputStream fos = openFileOutput("MainActivity12", Context.MODE_PRIVATE);
             fos.write(NoteTitle11.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save13() {
+        EditText NoteTitle13 = findViewById(R.id.NoteTitle13);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity13", Context.MODE_PRIVATE);
+            fos.write(NoteTitle13.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save14() {
+        EditText NoteTitle14 = findViewById(R.id.NoteTitle14);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity14", Context.MODE_PRIVATE);
+            fos.write(NoteTitle14.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save15() {
+        EditText NoteTitle15 = findViewById(R.id.NoteTitle15);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity15", Context.MODE_PRIVATE);
+            fos.write(NoteTitle15.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save16() {
+        EditText NoteTitle16 = findViewById(R.id.NoteTitle16);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
+            fos.write(NoteTitle16.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save17() {
+        EditText NoteTitle17 = findViewById(R.id.NoteTitle17);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity17", Context.MODE_PRIVATE);
+            fos.write(NoteTitle17.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void save18() {
+        EditText NoteTitle18 = findViewById(R.id.NoteTitle18);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity18", Context.MODE_PRIVATE);
+            fos.write(NoteTitle18.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -1024,7 +1390,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load12() {
-        EditText NoteTitle11 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle12 = findViewById(R.id.NoteTitle6);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -1034,7 +1400,109 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            NoteTitle11.setText(stringBuilder.toString());
+            NoteTitle12.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load13() {
+        EditText NoteTitle13 = findViewById(R.id.NoteTitle13);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity13")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            NoteTitle13.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load14() {
+        EditText NoteTitle14 = findViewById(R.id.NoteTitle14);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity14")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            NoteTitle14.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load15() {
+        EditText NoteTitle15 = findViewById(R.id.NoteTitle15);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity15")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            NoteTitle15.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load16() {
+        EditText NoteTitle16 = findViewById(R.id.NoteTitle16);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity16")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            NoteTitle16.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load17() {
+        EditText NoteTitle17 = findViewById(R.id.NoteTitle17);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity17")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            NoteTitle17.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load18() {
+        EditText NoteTitle18 = findViewById(R.id.NoteTitle18);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity18")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            NoteTitle18.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
