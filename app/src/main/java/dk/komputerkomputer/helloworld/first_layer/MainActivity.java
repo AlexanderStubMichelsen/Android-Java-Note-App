@@ -622,10 +622,10 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
     public void save() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle1);
+        EditText NoteTitle1 = findViewById(R.id.NoteTitle1);
         try {
             FileOutputStream fos = openFileOutput("MainActivity11", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.write(NoteTitle1.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -633,10 +633,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save2() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle2);
+        EditText NoteTitle2 = findViewById(R.id.NoteTitle2);
         try {
             FileOutputStream fos = openFileOutput("MainActivity12", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.write(NoteTitle2.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -644,10 +644,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save3() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle3);
+        EditText NoteTitle3 = findViewById(R.id.NoteTitle3);
         try {
             FileOutputStream fos = openFileOutput("MainActivity13", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.write(NoteTitle3.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -655,10 +655,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save4() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle4);
+        EditText NoteTitle4 = findViewById(R.id.NoteTitle4);
         try {
             FileOutputStream fos = openFileOutput("MainActivity14", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.write(NoteTitle4.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -666,10 +666,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save5() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle5);
+        EditText NoteTitle5 = findViewById(R.id.NoteTitle5);
         try {
             FileOutputStream fos = openFileOutput("MainActivity15", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.write(NoteTitle5.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -677,10 +677,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save6() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
         try {
             FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            fos.write(NoteTitle6.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -688,10 +688,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save7() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle7);
+        EditText NoteTitle7 = findViewById(R.id.NoteTitle7);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            FileOutputStream fos = openFileOutput("MainActivity17", Context.MODE_PRIVATE);
+            fos.write(NoteTitle7.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -699,10 +699,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save8() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle8);
+        EditText NoteTitle8 = findViewById(R.id.NoteTitle8);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            FileOutputStream fos = openFileOutput("MainActivity18", Context.MODE_PRIVATE);
+            fos.write(NoteTitle8.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -710,10 +710,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save9() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle9);
+        EditText NoteTitle9 = findViewById(R.id.NoteTitle9);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            FileOutputStream fos = openFileOutput("MainActivity19", Context.MODE_PRIVATE);
+            fos.write(NoteTitle9.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -721,10 +721,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save10() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle10);
+        EditText NoteTitle10 = findViewById(R.id.NoteTitle10);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            FileOutputStream fos = openFileOutput("MainActivity20", Context.MODE_PRIVATE);
+            fos.write(NoteTitle10.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -732,10 +732,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save11() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle11);
+        EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
+            FileOutputStream fos = openFileOutput("MainActivity21", Context.MODE_PRIVATE);
+            fos.write(NoteTitle11.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -743,7 +743,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle1);
+        EditText NoteTitle1 = findViewById(R.id.NoteTitle1);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -753,14 +753,14 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle1.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void load2() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle2);
+        EditText NoteTitle2 = findViewById(R.id.NoteTitle2);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -770,14 +770,14 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle2.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void load3() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle3);
+        EditText NoteTitle3 = findViewById(R.id.NoteTitle3);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -787,14 +787,14 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle3.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void load4() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle4);
+        EditText NoteTitle4 = findViewById(R.id.NoteTitle4);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -804,14 +804,14 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle4.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void load5() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle5);
+        EditText NoteTitle5 = findViewById(R.id.NoteTitle5);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -821,14 +821,14 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle5.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void load6() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -838,14 +838,14 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle6.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void load7() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle7 = findViewById(R.id.NoteTitle6);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -855,14 +855,14 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle7.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void load8() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle8 = findViewById(R.id.NoteTitle6);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -872,14 +872,14 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle8.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void load9() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle9 = findViewById(R.id.NoteTitle6);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -889,14 +889,14 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle9.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void load10() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle10 = findViewById(R.id.NoteTitle6);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -906,14 +906,14 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle10.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void load11() {
-        EditText edtEmTwo = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle11 = findViewById(R.id.NoteTitle6);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -923,7 +923,7 @@ public class MainActivity extends AppCompatActivity {
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
             }
-            edtEmTwo.setText(stringBuilder.toString());
+            NoteTitle11.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
