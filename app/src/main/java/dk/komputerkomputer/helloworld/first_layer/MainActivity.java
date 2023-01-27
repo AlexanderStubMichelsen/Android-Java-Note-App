@@ -73,17 +73,23 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        EditText editText = findViewById(R.id.textView1mTwo);
-        EditText editText2 = findViewById(R.id.textView2mTwo);
-        EditText editText3 = findViewById(R.id.textView3mTwo);
-        EditText editText4 = findViewById(R.id.textView4mTwo);
-        EditText editText5 = findViewById(R.id.textView5mTwo);
-        EditText editText6 = findViewById(R.id.textView6mTwo);
+        EditText NoteTitle1 = findViewById(R.id.NoteTitle1);
+        EditText NoteTitle2 = findViewById(R.id.NoteTitle2);
+        EditText NoteTitle3 = findViewById(R.id.NoteTitle3);
+        EditText NoteTitle4 = findViewById(R.id.NoteTitle4);
+        EditText NoteTitle5 = findViewById(R.id.NoteTitle5);
+        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle7 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle8 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle9 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle10 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle11 = findViewById(R.id.NoteTitle6);
+
 
 
         //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
 
-        editText.addTextChangedListener(new TextWatcher() {
+        NoteTitle1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -101,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText.setOnTouchListener(new View.OnTouchListener() {
+        NoteTitle1.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -126,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText2.addTextChangedListener(new TextWatcher() {
+        NoteTitle2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -144,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText2.setOnTouchListener(new View.OnTouchListener() {
+        NoteTitle2.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -169,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText3.addTextChangedListener(new TextWatcher() {
+        NoteTitle3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -187,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText3.setOnTouchListener(new View.OnTouchListener() {
+        NoteTitle3.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -212,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText4.addTextChangedListener(new TextWatcher() {
+        NoteTitle4.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -230,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText4.setOnTouchListener(new View.OnTouchListener() {
+        NoteTitle4.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -255,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText5.addTextChangedListener(new TextWatcher() {
+        NoteTitle5.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -273,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText5.setOnTouchListener(new View.OnTouchListener() {
+        NoteTitle5.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -298,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText6.addTextChangedListener(new TextWatcher() {
+        NoteTitle6.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -316,7 +322,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        editText6.setOnTouchListener(new View.OnTouchListener() {
+        NoteTitle6.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -330,6 +336,218 @@ public class MainActivity extends AppCompatActivity {
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
                     enterNoteCollectionSpace6();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+
+        NoteTitle7.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save7();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle7.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNoteCollectionSpace7();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNoteCollectionSpace7();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+
+        NoteTitle8.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save8();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle8.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNoteCollectionSpace8();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNoteCollectionSpace8();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+        NoteTitle9.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save9();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle9.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNoteCollectionSpace9();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNoteCollectionSpace9();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+        NoteTitle10.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save10();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle10.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNoteCollectionSpace10();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNoteCollectionSpace10();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+        NoteTitle11.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save11();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle11.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNoteCollectionSpace11();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNoteCollectionSpace11();
                     return super.onDoubleTap(e);
                 }
             });
