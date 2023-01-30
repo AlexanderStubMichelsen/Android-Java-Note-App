@@ -6,8 +6,9 @@ public class Load {
 
     private String file;
 
-    public Load(String note) {
+    public Load(String note, String file) {
         this.note = note;
+        this.file = file;
     }
 
     public String getNote() {
@@ -16,6 +17,14 @@ public class Load {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
     }
 }
 
