@@ -10,8 +10,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import dk.komputerkomputer.helloworld.second_layer.MainActivity1;
-
 public class NoteFunctionality extends AppCompatActivity {
 
     public void enterNoteFrontPage() {
@@ -43,7 +41,7 @@ public class NoteFunctionality extends AppCompatActivity {
     public void load(String file) {
         StringBuilder stringBuilder;
         String note = null;
-        LoadText loadText = new LoadText(note);
+        Load loadText = new Load(note);
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
                     openFileInput(file)));

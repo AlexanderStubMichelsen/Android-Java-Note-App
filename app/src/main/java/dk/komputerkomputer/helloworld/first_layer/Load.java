@@ -1,10 +1,12 @@
 package dk.komputerkomputer.helloworld.first_layer;
 
-public class LoadText {
+public class Load {
 
     private String note;
 
-    public LoadText(String note) {
+    private String file;
+
+    public Load(String note) {
         this.note = note;
     }
 
