@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -21,8 +20,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import dk.komputerkomputer.helloworld.R;
-import dk.komputerkomputer.helloworld.first_layer.MainActivity;
-import dk.komputerkomputer.helloworld.second_layer.EnterNoteFrontPage;
+import dk.komputerkomputer.helloworld.first_layer.NoteFunctionality;
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity1 extends AppCompatActivity {
@@ -37,7 +35,7 @@ public class MainActivity1 extends AppCompatActivity {
 
         EditText note = findViewById(R.id.note);
 
-        EnterNoteFrontPage enterNFP = new EnterNoteFrontPage();
+        NoteFunctionality noteFunc = new NoteFunctionality();
 
         note.addTextChangedListener(new TextWatcher() {
             @Override
@@ -63,14 +61,14 @@ public class MainActivity1 extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
                     Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNFP.enterNoteFrontPage();
+                    noteFunc.enterNoteFrontPage();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
                     Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNFP.enterNoteFrontPage();
+                    noteFunc.enterNoteFrontPage();
                     return super.onDoubleTap(e);
                 }
             });
@@ -93,7 +91,7 @@ public class MainActivity1 extends AppCompatActivity {
         EditText note = findViewById(R.id.note);
         String text = note.getText().toString();
         try {
-            FileOutputStream fos = openFileOutput("MainActivity2", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1", Context.MODE_PRIVATE);
             fos.write(text.getBytes());
             fos.close();
         } catch (Exception e) {
@@ -107,7 +105,7 @@ public class MainActivity1 extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity2")));
+                    openFileInput("MainActivity1")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {

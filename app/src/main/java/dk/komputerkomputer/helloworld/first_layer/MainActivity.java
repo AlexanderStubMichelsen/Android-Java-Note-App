@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.GestureDetector;
@@ -39,6 +40,7 @@ import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity8;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity9;
+import dk.komputerkomputer.helloworld.first_layer.NoteFunctionality;
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity extends AppCompatActivity {
@@ -163,6 +165,8 @@ public class MainActivity extends AppCompatActivity {
         EditText NoteTitle16 = findViewById(R.id.NoteTitle16);
         EditText NoteTitle17 = findViewById(R.id.NoteTitle17);
         EditText NoteTitle18 = findViewById(R.id.NoteTitle18);
+
+        NoteFunctionality noteFunc = new NoteFunctionality();
 
         //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
 

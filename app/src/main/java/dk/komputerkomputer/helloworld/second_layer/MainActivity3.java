@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -20,7 +19,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import dk.komputerkomputer.helloworld.R;
-import dk.komputerkomputer.helloworld.first_layer.MainActivity;
+import dk.komputerkomputer.helloworld.first_layer.NoteFunctionality;
 
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
@@ -36,6 +35,8 @@ public class MainActivity3 extends AppCompatActivity {
 
         EditText note = findViewById(R.id.note);
 
+        NoteFunctionality noteFunc = new NoteFunctionality();
+
         note.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -44,7 +45,7 @@ public class MainActivity3 extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                save();
+                noteFunc.save("MainActivity3", note.getText().toString());
 //                Toast.makeText(getApplicationContext(), "Save", Toast.LENGTH_SHORT).show();
             }
 
@@ -60,14 +61,14 @@ public class MainActivity3 extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteFrontPage();
+                    noteFunc.enterNoteFrontPage();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteFrontPage();
+                    noteFunc.enterNoteFrontPage();
                     return super.onDoubleTap(e);
                 }
             });
@@ -80,11 +81,11 @@ public class MainActivity3 extends AppCompatActivity {
         });
     }
 
-    //TODO Button Back, Save, Load.
+    /*//TODO Button Back, Save, Load.
     public void enterNoteFrontPage() {
         Intent firstActivityIntent = new Intent(this, MainActivity.class);
         startActivity(firstActivityIntent);
-    }
+    }*/
 
     public void save() {
         EditText note = findViewById(R.id.note);
