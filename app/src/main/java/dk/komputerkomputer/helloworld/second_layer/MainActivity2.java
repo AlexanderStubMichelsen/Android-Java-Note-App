@@ -29,9 +29,11 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main6);
+        setContentView(R.layout.activity_main2);
 
         load();
+
+        //TODO set scrollview on all note
 
         EditText note = findViewById(R.id.note);
 
@@ -81,7 +83,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     //TODO Button Back, Save, Load.
     public void enterNoteFrontPage() {
-        Intent firstActivityIntent = new Intent(this, MainActivity2.class);
+        Intent firstActivityIntent = new Intent(this, MainActivity.class);
         startActivity(firstActivityIntent);
     }
 

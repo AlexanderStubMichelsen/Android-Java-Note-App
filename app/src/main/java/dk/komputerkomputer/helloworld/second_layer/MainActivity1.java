@@ -22,6 +22,7 @@ import java.io.InputStreamReader;
 
 import dk.komputerkomputer.helloworld.R;
 import dk.komputerkomputer.helloworld.first_layer.MainActivity;
+import dk.komputerkomputer.helloworld.second_layer.EnterNoteFrontPage;
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity1 extends AppCompatActivity {
@@ -34,8 +35,9 @@ public class MainActivity1 extends AppCompatActivity {
 
         load();
 
-// TODO actities does not refer properly to each other and hints do not work properly
         EditText note = findViewById(R.id.note);
+
+        EnterNoteFrontPage enterNFP = new EnterNoteFrontPage();
 
         note.addTextChangedListener(new TextWatcher() {
             @Override
@@ -61,14 +63,14 @@ public class MainActivity1 extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
                     Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteFrontPage();
+                    enterNFP.enterNoteFrontPage();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
                     Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteFrontPage();
+                    enterNFP.enterNoteFrontPage();
                     return super.onDoubleTap(e);
                 }
             });
@@ -82,10 +84,10 @@ public class MainActivity1 extends AppCompatActivity {
     }
 
     //TODO Button Back, Save, Load.
-    public void enterNoteFrontPage() {
+   /* public void enterNoteFrontPage() {
         Intent firstActivityIntent = new Intent(this, MainActivity.class);
         startActivity(firstActivityIntent);
-    }
+    }*/
 
     public void save() {
         EditText note = findViewById(R.id.note);

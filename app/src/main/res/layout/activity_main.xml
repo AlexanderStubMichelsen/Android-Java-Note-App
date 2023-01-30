@@ -9,14 +9,16 @@
     android:padding="20dp"
     android:fillViewport="true"
     tools:context=".first_layer.MainActivity"
-    tools:ignore="Overdraw">
+    tools:ignore="Overdraw"
+    android:shape="rectangle">
 
     // TODO change maxLength
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:stretchColumns="1">
+        android:paddingLeft="21sp"
+        android:paddingRight="21sp">
 
     <EditText
         android:id="@+id/NoteTitle1"

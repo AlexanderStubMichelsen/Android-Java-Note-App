@@ -227,6 +227,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // TODO actities does not refer properly to each other and hints do not work properly
+
+
         NoteTitle2.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 

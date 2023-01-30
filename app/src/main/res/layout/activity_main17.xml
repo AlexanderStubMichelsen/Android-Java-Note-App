@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,6 +9,11 @@
     tools:context=".second_layer.MainActivity17"
     tools:ignore="Overdraw">
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="21sp"
+        android:paddingRight="21sp">
 
     <!--    //TODO MAKE NOTE maxLength LONGER-->
     <EditText
@@ -18,7 +23,7 @@
         android:autofillHints="Note"
         android:hint="Note 17"
         android:inputType="textMultiLine"
-        android:lines="48"
+        android:lines="98"
         android:gravity="start"
         android:paddingTop="73sp"
         android:padding="8dp"
@@ -28,6 +33,6 @@
         android:textColorHint="#0000ff"
         android:textSize="20sp" />
 
+    </TableLayout>
 
-
-</LinearLayout>
+</ScrollView>
