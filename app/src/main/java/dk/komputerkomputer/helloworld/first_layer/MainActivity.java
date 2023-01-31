@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -236,6 +237,7 @@ public class MainActivity extends AppCompatActivity {
 
         NoteTitle2.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+                Activity MainActivity2 = new Activity();
 
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {

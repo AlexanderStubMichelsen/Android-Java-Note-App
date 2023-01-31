@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,6 +20,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import dk.komputerkomputer.helloworld.R;
+import dk.komputerkomputer.helloworld.first_layer.MainActivity;
 import dk.komputerkomputer.helloworld.first_layer.NoteFunctionality;
 
 
@@ -61,14 +63,14 @@ public class MainActivity4 extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    noteFunc.enterNoteFrontPage();
+                    enterNoteFrontPage();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    noteFunc.enterNoteFrontPage();
+                    enterNoteFrontPage();
                     return super.onDoubleTap(e);
                 }
             });
@@ -82,10 +84,10 @@ public class MainActivity4 extends AppCompatActivity {
     }
 
     //TODO Button Back, Save, Load.
-    /*public void enterNoteFrontPage() {
+    public void enterNoteFrontPage() {
         Intent firstActivityIntent = new Intent(this, MainActivity.class);
         startActivity(firstActivityIntent);
-    }*/
+    }
 
     public void save() {
         EditText note = findViewById(R.id.note);

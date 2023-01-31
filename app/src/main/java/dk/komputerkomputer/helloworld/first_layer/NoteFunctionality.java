@@ -1,5 +1,6 @@
 package dk.komputerkomputer.helloworld.first_layer;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
@@ -10,11 +11,23 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import dk.komputerkomputer.helloworld.second_layer.MainActivity2;
+
 public class NoteFunctionality extends AppCompatActivity {
 
     public void enterNoteFrontPage() {
         Intent firstActivityIntent = new Intent(this, MainActivity.class);
         startActivity(firstActivityIntent);
+    }
+
+    public void enterNote(Activity activity,Context context) {
+        //Class mainActivity = Class.forName("MainActivity" + i);
+        try {
+            Intent secondActivityIntent = new Intent(context, MainActivity2.class);
+            startActivity(secondActivityIntent);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
    /* public void enterNote(int i) {
@@ -38,7 +51,7 @@ public class NoteFunctionality extends AppCompatActivity {
 
     // TODO make em return from the LoadText class
 
-    public void load(String file) {
+    /*public void load(String file) {
         StringBuilder stringBuilder;
         String note = null;
         Load loadText = new Load(note);
@@ -54,5 +67,5 @@ public class NoteFunctionality extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }

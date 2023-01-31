@@ -289,5 +289,12 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:orientation="vertical"/>
+
+        <Button
+            android:id="@+id/PPButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_policy"
+            android:autoLink="all" />
     </TableLayout>
 </ScrollView>
