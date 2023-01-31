@@ -290,11 +290,12 @@
             android:textStyle="bold"
             android:orientation="vertical"/>
 
-        <Button
-            android:id="@+id/PPButton"
+        <TextView
+            android:id="@+id/PPLink"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/privacy_policy"
-            android:autoLink="all" />
+            android:clickable="true"
+            android:linksClickable="true" />
     </TableLayout>
 </ScrollView>

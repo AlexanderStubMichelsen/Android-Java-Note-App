@@ -10,11 +10,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.Editable;
+import android.text.Html;
 import android.text.TextWatcher;
+import android.text.method.LinkMovementMethod;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
@@ -167,7 +171,15 @@ public class MainActivity extends AppCompatActivity {
         EditText NoteTitle17 = findViewById(R.id.NoteTitle17);
         EditText NoteTitle18 = findViewById(R.id.NoteTitle18);
 
+        TextView textView = findViewById(R.id.PPLink);
+
         NoteFunctionality noteFunc = new NoteFunctionality();
+
+        textView.setText(Html.fromHtml(
+                "&nbsp; "+
+                        "<a href=\"https://www.komputerkomputer.dk\">Privacy policy</a> " +
+                        "created with xml, java and in android studio++"));
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
 
         //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
 
