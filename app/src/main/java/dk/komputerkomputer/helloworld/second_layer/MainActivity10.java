@@ -92,7 +92,7 @@ public class MainActivity10 extends AppCompatActivity {
         EditText note = findViewById(R.id.note);
         String text = note.getText().toString();
         try {
-            FileOutputStream fos = openFileOutput("MainActivity10", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity2.10", Context.MODE_PRIVATE);
             fos.write(text.getBytes());
             fos.close();
         } catch (Exception e) {
@@ -106,7 +106,7 @@ public class MainActivity10 extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity10")));
+                    openFileInput("MainActivity2.10")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {

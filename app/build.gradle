@@ -10,8 +10,8 @@ android {
         applicationId "dk.komputerkomputer.helloworld"
         minSdk 23
         targetSdk 33
-        versionCode 38
-        versionName "3.8"
+        versionCode 39
+        versionName "3.9"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

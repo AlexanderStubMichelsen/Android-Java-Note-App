@@ -1062,7 +1062,7 @@ public class MainActivity extends AppCompatActivity {
     public void save1() {
         EditText NoteTitle1 = findViewById(R.id.NoteTitle1);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity1", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.1", Context.MODE_PRIVATE);
             fos.write(NoteTitle1.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1073,7 +1073,7 @@ public class MainActivity extends AppCompatActivity {
     public void save2() {
         EditText NoteTitle2 = findViewById(R.id.NoteTitle2);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity2", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.2", Context.MODE_PRIVATE);
             fos.write(NoteTitle2.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1084,7 +1084,7 @@ public class MainActivity extends AppCompatActivity {
     public void save3() {
         EditText NoteTitle3 = findViewById(R.id.NoteTitle3);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity3", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.3", Context.MODE_PRIVATE);
             fos.write(NoteTitle3.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1095,7 +1095,7 @@ public class MainActivity extends AppCompatActivity {
     public void save4() {
         EditText NoteTitle4 = findViewById(R.id.NoteTitle4);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity4", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.4", Context.MODE_PRIVATE);
             fos.write(NoteTitle4.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1106,7 +1106,7 @@ public class MainActivity extends AppCompatActivity {
     public void save5() {
         EditText NoteTitle5 = findViewById(R.id.NoteTitle5);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity5", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.5", Context.MODE_PRIVATE);
             fos.write(NoteTitle5.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1117,7 +1117,7 @@ public class MainActivity extends AppCompatActivity {
     public void save6() {
         EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity6", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.6", Context.MODE_PRIVATE);
             fos.write(NoteTitle6.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1128,7 +1128,7 @@ public class MainActivity extends AppCompatActivity {
     public void save7() {
         EditText NoteTitle7 = findViewById(R.id.NoteTitle7);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity7", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.7", Context.MODE_PRIVATE);
             fos.write(NoteTitle7.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1139,7 +1139,7 @@ public class MainActivity extends AppCompatActivity {
     public void save8() {
         EditText NoteTitle8 = findViewById(R.id.NoteTitle8);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity8", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.8", Context.MODE_PRIVATE);
             fos.write(NoteTitle8.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1150,7 +1150,7 @@ public class MainActivity extends AppCompatActivity {
     public void save9() {
         EditText NoteTitle9 = findViewById(R.id.NoteTitle9);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity9", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.9", Context.MODE_PRIVATE);
             fos.write(NoteTitle9.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1161,7 +1161,7 @@ public class MainActivity extends AppCompatActivity {
     public void save10() {
         EditText NoteTitle10 = findViewById(R.id.NoteTitle10);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity10", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.10", Context.MODE_PRIVATE);
             fos.write(NoteTitle10.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1172,7 +1172,7 @@ public class MainActivity extends AppCompatActivity {
     public void save11() {
         EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity11", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.11", Context.MODE_PRIVATE);
             fos.write(NoteTitle11.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1183,7 +1183,7 @@ public class MainActivity extends AppCompatActivity {
     public void save12() {
         EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity12", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.12", Context.MODE_PRIVATE);
             fos.write(NoteTitle11.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1194,7 +1194,7 @@ public class MainActivity extends AppCompatActivity {
     public void save13() {
         EditText NoteTitle13 = findViewById(R.id.NoteTitle13);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity13", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.13", Context.MODE_PRIVATE);
             fos.write(NoteTitle13.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1205,7 +1205,7 @@ public class MainActivity extends AppCompatActivity {
     public void save14() {
         EditText NoteTitle14 = findViewById(R.id.NoteTitle14);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity14", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.14", Context.MODE_PRIVATE);
             fos.write(NoteTitle14.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1216,7 +1216,7 @@ public class MainActivity extends AppCompatActivity {
     public void save15() {
         EditText NoteTitle15 = findViewById(R.id.NoteTitle15);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity15", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.15", Context.MODE_PRIVATE);
             fos.write(NoteTitle15.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1227,7 +1227,7 @@ public class MainActivity extends AppCompatActivity {
     public void save16() {
         EditText NoteTitle16 = findViewById(R.id.NoteTitle16);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.16", Context.MODE_PRIVATE);
             fos.write(NoteTitle16.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1238,7 +1238,7 @@ public class MainActivity extends AppCompatActivity {
     public void save17() {
         EditText NoteTitle17 = findViewById(R.id.NoteTitle17);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity17", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.17", Context.MODE_PRIVATE);
             fos.write(NoteTitle17.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1249,7 +1249,7 @@ public class MainActivity extends AppCompatActivity {
     public void save18() {
         EditText NoteTitle18 = findViewById(R.id.NoteTitle18);
         try {
-            FileOutputStream fos = openFileOutput("MainActivity18", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("MainActivity1.18", Context.MODE_PRIVATE);
             fos.write(NoteTitle18.getText().toString().getBytes());
             fos.close();
         } catch (Exception e) {
@@ -1262,7 +1262,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1")));
+                    openFileInput("MainActivity1.1")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1279,7 +1279,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity2")));
+                    openFileInput("MainActivity1.2")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1296,7 +1296,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity3")));
+                    openFileInput("MainActivity1.3")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1313,7 +1313,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity4")));
+                    openFileInput("MainActivity1.4")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1330,7 +1330,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity5")));
+                    openFileInput("MainActivity1.5")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1347,7 +1347,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity6")));
+                    openFileInput("MainActivity1.6")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1364,7 +1364,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity7")));
+                    openFileInput("MainActivity1.7")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1381,7 +1381,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity8")));
+                    openFileInput("MainActivity1.8")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1398,7 +1398,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity9")));
+                    openFileInput("MainActivity1.9")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1415,7 +1415,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity10")));
+                    openFileInput("MainActivity1.10")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1432,7 +1432,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity11")));
+                    openFileInput("MainActivity1.11")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1449,7 +1449,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity12")));
+                    openFileInput("MainActivity1.12")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1466,7 +1466,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity13")));
+                    openFileInput("MainActivity1.13")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1483,7 +1483,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity14")));
+                    openFileInput("MainActivity1.14")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1500,7 +1500,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity15")));
+                    openFileInput("MainActivity1.15")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1517,7 +1517,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity16")));
+                    openFileInput("MainActivity1.16")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1534,7 +1534,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity17")));
+                    openFileInput("MainActivity1.17")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
@@ -1551,7 +1551,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity18")));
+                    openFileInput("MainActivity1.18")));
             String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
