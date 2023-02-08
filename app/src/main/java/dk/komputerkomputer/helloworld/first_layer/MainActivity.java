@@ -18,6 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -174,6 +175,9 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.PPLink);
 
         NoteFunctionality noteFunc = new NoteFunctionality();
+
+        ScrollView sv = findViewById(R.id.scrl);
+        sv.scrollTo(0, 1000);
 
         textView.setText(Html.fromHtml(
                 "&nbsp; "+

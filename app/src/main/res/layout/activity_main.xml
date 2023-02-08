@@ -10,7 +10,10 @@
     android:fillViewport="true"
     tools:context=".first_layer.MainActivity"
     tools:ignore="Overdraw"
-    android:shape="rectangle">
+    android:shape="rectangle"
+    android:overScrollMode="never"
+    android:id="@+id/scrl">
+
 
     // TODO change maxLength
 
