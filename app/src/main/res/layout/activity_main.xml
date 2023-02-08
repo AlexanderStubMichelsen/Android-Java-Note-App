@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/wp2499812"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:paddingTop="100dp"
     android:fillViewport="true"
     tools:context=".first_layer.MainActivity"
     tools:ignore="Overdraw"
