@@ -1179,7 +1179,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void save12() {
-        EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
+        EditText NoteTitle11 = findViewById(R.id.NoteTitle12);
         try {
             FileOutputStream fos = openFileOutput("MainActivity1.12", Context.MODE_PRIVATE);
             fos.write(NoteTitle11.getText().toString().getBytes());
@@ -1358,7 +1358,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load7() {
-        EditText NoteTitle7 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle7 = findViewById(R.id.NoteTitle7);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -1375,7 +1375,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load8() {
-        EditText NoteTitle8 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle8 = findViewById(R.id.NoteTitle8);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -1392,7 +1392,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load9() {
-        EditText NoteTitle9 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle9 = findViewById(R.id.NoteTitle9);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -1409,7 +1409,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load10() {
-        EditText NoteTitle10 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle10 = findViewById(R.id.NoteTitle10);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -1426,7 +1426,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load11() {
-        EditText NoteTitle11 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
@@ -1443,7 +1443,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void load12() {
-        EditText NoteTitle12 = findViewById(R.id.NoteTitle6);
+        EditText NoteTitle12 = findViewById(R.id.NoteTitle12);
         StringBuilder stringBuilder;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
