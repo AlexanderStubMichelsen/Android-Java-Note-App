@@ -11,7 +11,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingLeft="21sp"
         android:paddingRight="21sp">
 
@@ -30,7 +30,8 @@
         android:singleLine="false"
         android:textColor="#0000ff"
         android:textColorHint="#0000ff"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
 
     </TableLayout>
 

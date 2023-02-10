@@ -64,14 +64,14 @@ public class MainActivity15 extends AppCompatActivity {
 
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
                     enterNoteFrontPage();
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
                     enterNoteFrontPage();
                     return super.onDoubleTap(e);
                 }

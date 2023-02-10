@@ -6,10 +6,7 @@ import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.BufferedReader;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 import dk.komputerkomputer.helloworld.second_layer.MainActivity2;
 

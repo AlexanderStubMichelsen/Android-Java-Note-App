@@ -47,7 +47,7 @@ public class MainActivity3 extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                noteFunc.save("MainActivity3", note.getText().toString());
+                save();
 //                Toast.makeText(getApplicationContext(), "Save", Toast.LENGTH_SHORT).show();
             }
 

@@ -13,6 +13,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
@@ -30,13 +31,13 @@ public class MainActivity6 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main6);
+        setContentView(R.layout.activity_main1);
 
         load();
 
         EditText note = findViewById(R.id.note);
 
-        NoteFunctionality noteFunc = new NoteFunctionality();
+//        NoteFunctionality noteFunc = new NoteFunctionality();
 
         note.addTextChangedListener(new TextWatcher() {
             @Override
