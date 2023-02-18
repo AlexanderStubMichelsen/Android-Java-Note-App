@@ -26,8 +26,8 @@
         android:padding="8dp"
         android:paddingTop="73sp"
         android:singleLine="false"
-        android:textColor="#0000ff"
-        android:textColorHint="#0000ff"
+        android:textColor="#7fff00"
+        android:textColorHint="#7fff00"
         android:textSize="20sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />

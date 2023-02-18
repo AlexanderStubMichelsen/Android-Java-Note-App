@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <color name="New_Theme_Text_Color">#7fff00</color>
+
+    <style name="Chartreuse" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#7fff00</item>
+    </style>
+
+</resources>
