@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wp2499814"
-    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".second_layer.MainActivity5"
     tools:ignore="Overdraw">
