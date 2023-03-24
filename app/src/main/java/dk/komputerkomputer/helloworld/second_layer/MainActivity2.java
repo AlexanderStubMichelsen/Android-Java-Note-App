@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,14 +13,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
-import java.io.BufferedReader;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 import dk.komputerkomputer.helloworld.R;
 import dk.komputerkomputer.helloworld.first_layer.MainActivity;
-import dk.komputerkomputer.helloworld.first_layer.NoteFunctionality;
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity2 extends AppCompatActivity {
@@ -32,13 +25,15 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        load();
-
-        //TODO set scrollview on all note
-
         EditText note = findViewById(R.id.note);
 
-        NoteFunctionality noteFunc = new NoteFunctionality();
+        Note_Func note_func = new Note_Func();
+
+        String file = "MainActivity2.2";
+
+        note.setText(note_func.load(getApplicationContext(), file));
+
+        //TODO set scrollview on all note
 
         note.addTextChangedListener(new TextWatcher() {
             @Override
@@ -48,7 +43,8 @@ public class MainActivity2 extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                save();
+                String text = note.getText().toString();
+                note_func.save(getApplicationContext(), text, file);
 //                Toast.makeText(getApplicationContext(), "Save", Toast.LENGTH_SHORT).show();
             }
 
@@ -87,35 +83,5 @@ public class MainActivity2 extends AppCompatActivity {
     public void enterNoteFrontPage() {
         Intent firstActivityIntent = new Intent(this, MainActivity.class);
         startActivity(firstActivityIntent);
-    }
-
-    public void save() {
-        EditText note = findViewById(R.id.note);
-        String text = note.getText().toString();
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity2.2", Context.MODE_PRIVATE);
-            fos.write(text.getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    public void load() {
-        EditText note = findViewById(R.id.note);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity2.2")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            note.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

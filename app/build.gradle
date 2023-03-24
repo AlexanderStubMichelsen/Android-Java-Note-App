@@ -6,6 +6,9 @@ plugins {
 android {
     namespace 'dk.komputerkomputer.helloworld'
     compileSdk 33
+    lintOptions {
+        disable 'RestrictedApi'
+    }
 
     defaultConfig {
         applicationId "dk.komputerkomputer.helloworld"
