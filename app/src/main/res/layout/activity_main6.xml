@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/wp2499814"
     android:padding="16dp"
-    tools:context=".second_layer.MainActivity18"
+    tools:context=".second_layer.MainActivity6"
     tools:ignore="Overdraw">
 
     <TableLayout
@@ -14,7 +14,6 @@
         android:paddingLeft="21sp"
         android:paddingRight="21sp">
 
-    <!--    //TODO MAKE NOTE maxLength LONGER-->
     <EditText
         android:id="@+id/note"
         android:layout_width="match_parent"
@@ -22,7 +21,7 @@
         android:autofillHints="Note"
         android:hint="Note"
         android:inputType="textMultiLine"
-        android:lines="98"
+        android:lines="48"
         android:gravity="start"
         android:paddingTop="73sp"
         android:padding="8dp"

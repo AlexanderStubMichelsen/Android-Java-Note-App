@@ -8,8 +8,8 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/notesicon_playstore"
-        android:versionCode="52"
-        android:versionName="5.2"
+        android:versionCode="55"
+        android:versionName="5.5"
         android:label="Authentic notes"
         android:roundIcon="@drawable/notesicon_playstore"
         android:supportsRtl="true"
@@ -102,6 +102,13 @@
         </activity>
         <activity
             android:name=".second_layer.MainActivity5"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".second_layer.MainActivity6"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"

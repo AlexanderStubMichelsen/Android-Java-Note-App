@@ -41,6 +41,7 @@ import dk.komputerkomputer.helloworld.second_layer.MainActivity3;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity4;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity5;
 //import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity8;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity9;
@@ -85,11 +86,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        try {
-//            load6();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        try {
+            load6();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         try {
             load7();
         } catch (Exception e) {
@@ -156,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
         EditText NoteTitle3 = findViewById(R.id.NoteTitle3);
         EditText NoteTitle4 = findViewById(R.id.NoteTitle4);
         EditText NoteTitle5 = findViewById(R.id.NoteTitle5);
+        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
         EditText NoteTitle7 = findViewById(R.id.NoteTitle7);
         EditText NoteTitle8 = findViewById(R.id.NoteTitle8);
         EditText NoteTitle9 = findViewById(R.id.NoteTitle9);
@@ -178,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView.setText(Html.fromHtml(
                 "&nbsp; "+
-                        "<a href=\"https://www.komputerkomputer.dk\">Privacy policy</a> " +
+                        "<a href=\"http://207.154.228.165\">Privacy policy</a> " +
                         "created with xml, java and in android studio++"));
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
@@ -403,48 +405,48 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        NoteTitle6.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//                save6();
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//
-//            }
-//        });
-//
-//        NoteTitle6.setOnTouchListener(new View.OnTouchListener() {
-//            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
-//
-//                @Override
-//                public void onLongPress(@NonNull MotionEvent e) {
-////                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-//                    enterNote6();
-//                    super.onLongPress(e);
-//                }
-//
-//                @Override
-//                public boolean onDoubleTap(@NonNull MotionEvent e) {
-////                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-//                    enterNote6();
-//                    return super.onDoubleTap(e);
-//                }
-//            });
+        NoteTitle6.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                gestureDetector.onTouchEvent(event);
-//                return false;
-//            }
-//        });
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                save6();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        NoteTitle6.setOnTouchListener(new View.OnTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public void onLongPress(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                    enterNote6();
+                    super.onLongPress(e);
+                }
+
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+//                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                    enterNote6();
+                    return super.onDoubleTap(e);
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
 
         NoteTitle7.addTextChangedListener(new TextWatcher() {
             @Override
@@ -991,10 +993,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(secondActivityIntent);
     }
 
-//    public void enterNote6() {
-//        Intent secondActivityIntent = new Intent(this, MainActivity6.class);
-//        startActivity(secondActivityIntent);
-//    }
+    public void enterNote6() {
+        Intent secondActivityIntent = new Intent(this, MainActivity6.class);
+        startActivity(secondActivityIntent);
+    }
 
     public void enterNote7() {
         Intent secondActivityIntent = new Intent(this, MainActivity7.class);
@@ -1111,16 +1113,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//    public void save6() {
-//        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
-//        try {
-//            FileOutputStream fos = openFileOutput("MainActivity1.6", Context.MODE_PRIVATE);
-//            fos.write(NoteTitle6.getText().toString().getBytes());
-//            fos.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public void save6() {
+        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
+        try {
+            FileOutputStream fos = openFileOutput("MainActivity1.6", Context.MODE_PRIVATE);
+            fos.write(NoteTitle6.getText().toString().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void save7() {
         EditText NoteTitle7 = findViewById(R.id.NoteTitle7);
@@ -1339,22 +1341,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//    public void load6() {
-//        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
-//        StringBuilder stringBuilder;
-//        try {
-//            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-//                    openFileInput("MainActivity1.6")));
-//            String inputString;
-//            stringBuilder = new StringBuilder();
-//            while ((inputString = inputReader.readLine()) != null) {
-//                stringBuilder.append(inputString);
-//            }
-//            NoteTitle6.setText(stringBuilder.toString());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public void load6() {
+        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
+        StringBuilder stringBuilder;
+        try {
+            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
+                    openFileInput("MainActivity1.6")));
+            String inputString;
+            stringBuilder = new StringBuilder();
+            while ((inputString = inputReader.readLine()) != null) {
+                stringBuilder.append(inputString);
+            }
+            NoteTitle6.setText(stringBuilder.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void load7() {
         EditText NoteTitle7 = findViewById(R.id.NoteTitle7);
