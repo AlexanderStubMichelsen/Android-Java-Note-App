@@ -45,7 +45,7 @@ import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity8;
 import dk.komputerkomputer.helloworld.second_layer.MainActivity9;
-import dk.komputerkomputer.helloworld.first_layer.NoteFunctionality;
+import dk.komputerkomputer.helloworld.second_layer.Note_Func1;
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity extends AppCompatActivity {
@@ -152,28 +152,28 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        EditText NoteTitle1 = findViewById(R.id.NoteTitle1);
-        EditText NoteTitle2 = findViewById(R.id.NoteTitle2);
-        EditText NoteTitle3 = findViewById(R.id.NoteTitle3);
-        EditText NoteTitle4 = findViewById(R.id.NoteTitle4);
-        EditText NoteTitle5 = findViewById(R.id.NoteTitle5);
-        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
-        EditText NoteTitle7 = findViewById(R.id.NoteTitle7);
-        EditText NoteTitle8 = findViewById(R.id.NoteTitle8);
-        EditText NoteTitle9 = findViewById(R.id.NoteTitle9);
-        EditText NoteTitle10 = findViewById(R.id.NoteTitle10);
-        EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
-        EditText NoteTitle12 = findViewById(R.id.NoteTitle12);
-        EditText NoteTitle13 = findViewById(R.id.NoteTitle13);
-        EditText NoteTitle14 = findViewById(R.id.NoteTitle14);
-        EditText NoteTitle15 = findViewById(R.id.NoteTitle15);
-        EditText NoteTitle16 = findViewById(R.id.NoteTitle16);
-        EditText NoteTitle17 = findViewById(R.id.NoteTitle17);
-        EditText NoteTitle18 = findViewById(R.id.NoteTitle18);
+        EditText noteTitle1 = findViewById(R.id.NoteTitle1);
+        EditText noteTitle2 = findViewById(R.id.NoteTitle2);
+        EditText noteTitle3 = findViewById(R.id.NoteTitle3);
+        EditText noteTitle4 = findViewById(R.id.NoteTitle4);
+        EditText noteTitle5 = findViewById(R.id.NoteTitle5);
+        EditText noteTitle6 = findViewById(R.id.NoteTitle6);
+        EditText noteTitle7 = findViewById(R.id.NoteTitle7);
+        EditText noteTitle8 = findViewById(R.id.NoteTitle8);
+        EditText noteTitle9 = findViewById(R.id.NoteTitle9);
+        EditText noteTitle10 = findViewById(R.id.NoteTitle10);
+        EditText noteTitle11 = findViewById(R.id.NoteTitle11);
+        EditText noteTitle12 = findViewById(R.id.NoteTitle12);
+        EditText noteTitle13 = findViewById(R.id.NoteTitle13);
+        EditText noteTitle14 = findViewById(R.id.NoteTitle14);
+        EditText noteTitle15 = findViewById(R.id.NoteTitle15);
+        EditText noteTitle16 = findViewById(R.id.NoteTitle16);
+        EditText noteTitle17 = findViewById(R.id.NoteTitle17);
+        EditText noteTitle18 = findViewById(R.id.NoteTitle18);
 
         TextView textView = findViewById(R.id.PPLink);
 
-        NoteFunctionality noteFunc = new NoteFunctionality();
+        Note_Func1 note_func1 = new Note_Func1();
 
         ScrollView sv = findViewById(R.id.scrl);
         sv.scrollTo(0, 1000);
@@ -181,12 +181,12 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(Html.fromHtml(
                 "&nbsp; "+
                         "<a href=\"http://207.154.228.165\">Privacy policy</a> " +
-                        "created with xml, java and in android studio++"));
+                        "created with xml and java in android studio++"));
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
         //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
 
-        NoteTitle1.addTextChangedListener(new TextWatcher() {
+        noteTitle1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -194,8 +194,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save1();
+                String text = noteTitle1.getText().toString();
+                String file = "MainActivity1.1";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -204,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle1.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle1.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -229,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle2.addTextChangedListener(new TextWatcher() {
+        noteTitle2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -237,8 +238,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save2();
+                String text = noteTitle2.getText().toString();
+                String file = "MainActivity1.2";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -250,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
         // TODO actities does not refer properly to each other and hints do not work properly
 
 
-        NoteTitle2.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle2.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
                 Activity MainActivity2 = new Activity();
 
@@ -276,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle3.addTextChangedListener(new TextWatcher() {
+        noteTitle3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -284,8 +286,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save3();
+                String text = noteTitle3.getText().toString();
+                String file = "MainActivity1.3";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -294,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle3.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle3.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -319,7 +322,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle4.addTextChangedListener(new TextWatcher() {
+        noteTitle4.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -327,8 +330,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save4();
+                String text = noteTitle4.getText().toString();
+                String file = "MainActivity1.4";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -337,7 +341,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle4.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle4.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -362,7 +366,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle5.addTextChangedListener(new TextWatcher() {
+        noteTitle5.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -370,8 +374,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save5();
+                String text = noteTitle5.getText().toString();
+                String file = "MainActivity1.5";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -380,7 +385,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle5.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle5.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -405,7 +410,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle6.addTextChangedListener(new TextWatcher() {
+        noteTitle6.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -413,8 +418,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save6();
+                String text = noteTitle6.getText().toString();
+                String file = "MainActivity1.6";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -423,7 +429,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle6.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle6.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -448,7 +454,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle7.addTextChangedListener(new TextWatcher() {
+        noteTitle7.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -456,8 +462,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save7();
+                String text = noteTitle7.getText().toString();
+                String file = "MainActivity1.7";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -466,7 +473,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle7.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle7.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -491,7 +498,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle8.addTextChangedListener(new TextWatcher() {
+        noteTitle8.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -499,8 +506,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save8();
+                String text = noteTitle8.getText().toString();
+                String file = "MainActivity1.8";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -509,7 +517,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle8.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle8.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -533,7 +541,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        NoteTitle9.addTextChangedListener(new TextWatcher() {
+        noteTitle9.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -541,8 +549,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save9();
+                String text = noteTitle9.getText().toString();
+                String file = "MainActivity1.9";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -551,7 +560,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle9.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle9.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -575,7 +584,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        NoteTitle10.addTextChangedListener(new TextWatcher() {
+        noteTitle10.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -583,8 +592,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save10();
+                String text = noteTitle10.getText().toString();
+                String file = "MainActivity1.10";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -593,7 +603,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle10.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle10.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -617,7 +627,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        NoteTitle11.addTextChangedListener(new TextWatcher() {
+        noteTitle11.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -625,8 +635,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save11();
+                String text = noteTitle11.getText().toString();
+                String file = "MainActivity1.11";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -635,7 +646,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle11.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle11.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -659,7 +670,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        NoteTitle12.addTextChangedListener(new TextWatcher() {
+        noteTitle12.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -667,8 +678,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save12();
+                String text = noteTitle12.getText().toString();
+                String file = "MainActivity1.12";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -677,7 +689,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle12.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle12.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -702,7 +714,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle13.addTextChangedListener(new TextWatcher() {
+        noteTitle13.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -710,8 +722,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save13();
+                String text = noteTitle13.getText().toString();
+                String file = "MainActivity1.13";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -720,7 +733,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle13.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle13.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -745,7 +758,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle14.addTextChangedListener(new TextWatcher() {
+        noteTitle14.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -753,8 +766,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save14();
+                String text = noteTitle14.getText().toString();
+                String file = "MainActivity1.14";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -763,7 +777,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle14.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle14.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -788,7 +802,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle15.addTextChangedListener(new TextWatcher() {
+        noteTitle15.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -796,8 +810,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save15();
+                String text = noteTitle15.getText().toString();
+                String file = "MainActivity1.15";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -806,13 +821,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle15.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle15.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote15();
+                    String text = noteTitle15.getText().toString();
+                    String file = "MainActivity1.15";
+                    note_func1.save(getApplicationContext(), text, file);
                     super.onLongPress(e);
                 }
 
@@ -831,7 +848,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle16.addTextChangedListener(new TextWatcher() {
+        noteTitle16.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -839,8 +856,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save16();
+                String text = noteTitle16.getText().toString();
+                String file = "MainActivity1.16";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -849,7 +867,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle16.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle16.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -874,7 +892,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle17.addTextChangedListener(new TextWatcher() {
+        noteTitle17.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -882,8 +900,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save17();
+                String text = noteTitle17.getText().toString();
+                String file = "MainActivity1.17";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -892,7 +911,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle17.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle17.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -917,7 +936,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle18.addTextChangedListener(new TextWatcher() {
+        noteTitle18.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -925,8 +944,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save18();
+                String text = noteTitle18.getText().toString();
+                String file = "MainActivity1.18";
+                note_func1.save(getApplicationContext(), text, file);
             }
 
             @Override
@@ -935,7 +955,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NoteTitle18.setOnTouchListener(new View.OnTouchListener() {
+        noteTitle18.setOnTouchListener(new View.OnTouchListener() {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
                 @Override

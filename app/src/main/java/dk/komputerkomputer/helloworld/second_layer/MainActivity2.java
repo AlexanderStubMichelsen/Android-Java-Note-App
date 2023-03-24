@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,7 +13,6 @@ import android.view.View;
 import android.widget.EditText;
 
 import dk.komputerkomputer.helloworld.R;
-import dk.komputerkomputer.helloworld.first_layer.MainActivity;
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity2 extends AppCompatActivity {
@@ -60,15 +58,13 @@ public class MainActivity2 extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteFrontPage();
-                    super.onLongPress(e);
+                    note_func.enterNoteFrontPage(getApplicationContext());                    super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteFrontPage();
-                    return super.onDoubleTap(e);
+                    note_func.enterNoteFrontPage(getApplicationContext());                    return super.onDoubleTap(e);
                 }
             });
 
@@ -78,10 +74,5 @@ public class MainActivity2 extends AppCompatActivity {
                 return false;
             }
         });
-    }
-
-    public void enterNoteFrontPage() {
-        Intent firstActivityIntent = new Intent(this, MainActivity.class);
-        startActivity(firstActivityIntent);
     }
 }

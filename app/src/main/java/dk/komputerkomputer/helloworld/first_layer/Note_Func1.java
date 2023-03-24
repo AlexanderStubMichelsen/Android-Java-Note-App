@@ -1,19 +1,13 @@
 package dk.komputerkomputer.helloworld.second_layer;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Context;
-import android.content.Intent;
-import android.view.View;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import dk.komputerkomputer.helloworld.first_layer.MainActivity;
-
-public class Note_Func {
+public class Note_Func1 {
 
     public void save(Context context, String text, String file) {
         try {
@@ -25,29 +19,19 @@ public class Note_Func {
         }
     }
 
-    public String load(Context context, String file) {
+    /*public void load(String file) {
         StringBuilder stringBuilder;
-        String inputString = null;
         try {
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    context.openFileInput(file)));
+                    openFileInput(file)));
+            String inputString;
             stringBuilder = new StringBuilder();
             while ((inputString = inputReader.readLine()) != null) {
                 stringBuilder.append(inputString);
-                return inputString;
             }
+            NoteTitle18.setText(stringBuilder.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
-    }
-
-    //TODO Button Back, Save, Load.
-    public void enterNoteFrontPage(Context context) {
-        Intent firstActivityIntent = new Intent(context, MainActivity.class);
-        firstActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(firstActivityIntent);
-    }
+    }*/
 }
-
-
