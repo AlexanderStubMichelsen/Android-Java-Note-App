@@ -1,10 +1,7 @@
 package dk.komputerkomputer.helloworld.second_layer;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Context;
 import android.content.Intent;
-import android.view.View;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;

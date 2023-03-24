@@ -61,96 +61,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //TODO:: complete this
 
-        try {
-            load1();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load2();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load3();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load4();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load5();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load6();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load7();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load8();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load9();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load10();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load11();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load12();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load13();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load14();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load15();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load16();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load17();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load18();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        //TODO Make all save methods try, catch
+
+
 
         EditText noteTitle1 = findViewById(R.id.NoteTitle1);
         EditText noteTitle2 = findViewById(R.id.NoteTitle2);
@@ -184,6 +97,115 @@ public class MainActivity extends AppCompatActivity {
                         "created with xml and java in android studio++"));
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
+        try {
+            String file = "MainActivity1.1";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.2";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.3";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.4";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.5";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.6";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.7";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.8";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.9";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.10";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.11";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.12";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.13";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.14";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.15";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.16";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.17";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String file = "MainActivity1.18";
+            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
 
         noteTitle1.addTextChangedListener(new TextWatcher() {
@@ -211,14 +233,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote1();
+                    note_func1.enterNote1(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote1();
+                    note_func1.enterNote1(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -259,14 +281,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote2();
+                    note_func1.enterNote2(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote2();
+                    note_func1.enterNote2(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -303,14 +325,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote3();
+                    note_func1.enterNote3(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote3();
+                    note_func1.enterNote3(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -347,14 +369,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote4();
+                    note_func1.enterNote5(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote4();
+                    note_func1.enterNote5(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -391,14 +413,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote5();
+                    note_func1.enterNote6(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote5();
+                    note_func1.enterNote6(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -435,14 +457,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote6();
+                    note_func1.enterNote7(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote6();
+                    note_func1.enterNote7(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -479,14 +501,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote7();
+                    note_func1.enterNote8(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote7();
+                    note_func1.enterNote8(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -523,14 +545,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote8();
+                    note_func1.enterNote9(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote8();
+                    note_func1.enterNote9(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -566,14 +588,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote9();
+                    note_func1.enterNote10(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote9();
+                    note_func1.enterNote10(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -609,14 +631,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote10();
+                    note_func1.enterNote11(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote10();
+                    note_func1.enterNote11(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -652,14 +674,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote11();
+                    note_func1.enterNote12(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote11();
+                    note_func1.enterNote12(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -695,14 +717,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote12();
+                    note_func1.enterNote12(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote12();
+                    note_func1.enterNote12(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -739,14 +761,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote13();
+                    note_func1.enterNote13(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote13();
+                    note_func1.enterNote13(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -783,14 +805,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote14();
+                    note_func1.enterNote14(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote14();
+                    note_func1.enterNote14(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -836,7 +858,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote15();
+                    note_func1.enterNote15(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -873,14 +895,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote16();
+                    note_func1.enterNote16(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote16();
+                    note_func1.enterNote17(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -917,14 +939,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote17();
+                    note_func1.enterNote17(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote17();
+                    note_func1.enterNote17(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -961,14 +983,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onLongPress(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNote18();
+                    note_func1.enterNote18(getApplicationContext());
                     super.onLongPress(e);
                 }
 
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
 //                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNote18();
+                    note_func1.enterNote18(getApplicationContext());
                     return super.onDoubleTap(e);
                 }
             });
@@ -981,302 +1003,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-    //TODO Make Interface
-
-    //TODO WRITE METHOD REFRESH
-
-    //TODO MAKE SAVE ON LONGPRESS DOUBLETAP WHILST CHANGING SCREEN
-
-    public void enterNote1() {
-        Intent secondActivityIntent = new Intent(this, MainActivity1.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote2() {
-        Intent secondActivityIntent = new Intent(this, MainActivity2.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote3() {
-        Intent secondActivityIntent = new Intent(this, MainActivity3.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote4() {
-        Intent secondActivityIntent = new Intent(this, MainActivity4.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote5() {
-        Intent secondActivityIntent = new Intent(this, MainActivity5.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote6() {
-        Intent secondActivityIntent = new Intent(this, MainActivity6.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote7() {
-        Intent secondActivityIntent = new Intent(this, MainActivity7.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote8() {
-        Intent secondActivityIntent = new Intent(this, MainActivity8.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote9() {
-        Intent secondActivityIntent = new Intent(this, MainActivity9.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote10() {
-        Intent secondActivityIntent = new Intent(this, MainActivity10.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote11() {
-        Intent secondActivityIntent = new Intent(this, MainActivity11.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote12() {
-        Intent secondActivityIntent = new Intent(this, MainActivity12.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote13() {
-        Intent secondActivityIntent = new Intent(this, MainActivity13.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote14() {
-        Intent secondActivityIntent = new Intent(this, MainActivity14.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote15() {
-        Intent secondActivityIntent = new Intent(this, MainActivity15.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote16() {
-        Intent secondActivityIntent = new Intent(this, MainActivity16.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote17() {
-        Intent secondActivityIntent = new Intent(this, MainActivity17.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNote18() {
-        Intent secondActivityIntent = new Intent(this, MainActivity18.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void save1() {
-        EditText NoteTitle1 = findViewById(R.id.NoteTitle1);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.1", Context.MODE_PRIVATE);
-            fos.write(NoteTitle1.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save2() {
-        EditText NoteTitle2 = findViewById(R.id.NoteTitle2);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.2", Context.MODE_PRIVATE);
-            fos.write(NoteTitle2.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save3() {
-        EditText NoteTitle3 = findViewById(R.id.NoteTitle3);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.3", Context.MODE_PRIVATE);
-            fos.write(NoteTitle3.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save4() {
-        EditText NoteTitle4 = findViewById(R.id.NoteTitle4);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.4", Context.MODE_PRIVATE);
-            fos.write(NoteTitle4.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save5() {
-        EditText NoteTitle5 = findViewById(R.id.NoteTitle5);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.5", Context.MODE_PRIVATE);
-            fos.write(NoteTitle5.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save6() {
-        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.6", Context.MODE_PRIVATE);
-            fos.write(NoteTitle6.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save7() {
-        EditText NoteTitle7 = findViewById(R.id.NoteTitle7);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.7", Context.MODE_PRIVATE);
-            fos.write(NoteTitle7.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save8() {
-        EditText NoteTitle8 = findViewById(R.id.NoteTitle8);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.8", Context.MODE_PRIVATE);
-            fos.write(NoteTitle8.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save9() {
-        EditText NoteTitle9 = findViewById(R.id.NoteTitle9);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.9", Context.MODE_PRIVATE);
-            fos.write(NoteTitle9.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save10() {
-        EditText NoteTitle10 = findViewById(R.id.NoteTitle10);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.10", Context.MODE_PRIVATE);
-            fos.write(NoteTitle10.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save11() {
-        EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.11", Context.MODE_PRIVATE);
-            fos.write(NoteTitle11.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save12() {
-        EditText NoteTitle11 = findViewById(R.id.NoteTitle12);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.12", Context.MODE_PRIVATE);
-            fos.write(NoteTitle11.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save13() {
-        EditText NoteTitle13 = findViewById(R.id.NoteTitle13);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.13", Context.MODE_PRIVATE);
-            fos.write(NoteTitle13.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save14() {
-        EditText NoteTitle14 = findViewById(R.id.NoteTitle14);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.14", Context.MODE_PRIVATE);
-            fos.write(NoteTitle14.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save15() {
-        EditText NoteTitle15 = findViewById(R.id.NoteTitle15);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.15", Context.MODE_PRIVATE);
-            fos.write(NoteTitle15.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save16() {
-        EditText NoteTitle16 = findViewById(R.id.NoteTitle16);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.16", Context.MODE_PRIVATE);
-            fos.write(NoteTitle16.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save17() {
-        EditText NoteTitle17 = findViewById(R.id.NoteTitle17);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.17", Context.MODE_PRIVATE);
-            fos.write(NoteTitle17.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save18() {
-        EditText NoteTitle18 = findViewById(R.id.NoteTitle18);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity1.18", Context.MODE_PRIVATE);
-            fos.write(NoteTitle18.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load1() {
+    /*public void load1() {
         EditText NoteTitle1 = findViewById(R.id.NoteTitle1);
         StringBuilder stringBuilder;
         try {
@@ -1580,6 +1307,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }
 
