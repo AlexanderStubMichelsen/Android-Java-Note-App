@@ -1,19 +1,34 @@
-package dk.komputerkomputer.helloworld.second_layer;
+package dk.komputerkomputer.helloworld.NoteFuncs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.widget.EditText;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import dk.komputerkomputer.helloworld.R;
 import dk.komputerkomputer.helloworld.first_layer.MainActivity;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity1;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity10;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity11;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity12;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity13;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity14;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity15;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity16;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity17;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity18;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity2;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity3;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity4;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity5;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity8;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity9;
 
-public class Note_Func1 {
+public class Note_Func_First_Layer extends MainActivity {
 
     public void save(Context context, String text, String file) {
         try {
@@ -41,6 +56,8 @@ public class Note_Func1 {
         }
         return null;
     }
+
+    //:: TODO Make enterNote dynamic with passed classes
 
     public void enterNote1(Context context) {
         Intent secondActivityIntent = new Intent(context, MainActivity1.class);

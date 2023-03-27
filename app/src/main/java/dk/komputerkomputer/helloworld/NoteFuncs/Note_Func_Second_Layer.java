@@ -1,4 +1,4 @@
-package dk.komputerkomputer.helloworld.second_layer;
+package dk.komputerkomputer.helloworld.NoteFuncs;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 
 import dk.komputerkomputer.helloworld.first_layer.MainActivity;
 
-public class Note_Func {
+public class Note_Func_Second_Layer {
 
     public void save(Context context, String text, String file) {
         try {

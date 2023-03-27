@@ -12,6 +12,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import dk.komputerkomputer.helloworld.NoteFuncs.Note_Func_Second_Layer;
 import dk.komputerkomputer.helloworld.R;
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
@@ -25,7 +26,7 @@ public class MainActivity6 extends AppCompatActivity {
 
         EditText note = findViewById(R.id.note);
 
-        Note_Func note_func = new Note_Func();
+        Note_Func_Second_Layer note_func = new Note_Func_Second_Layer();
 
         String file = "MainActivity2.6";
 

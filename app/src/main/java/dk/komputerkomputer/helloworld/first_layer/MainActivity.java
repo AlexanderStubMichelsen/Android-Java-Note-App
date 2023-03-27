@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
@@ -19,33 +17,10 @@ import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Objects;
 
 import dk.komputerkomputer.helloworld.R;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity1;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity10;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity11;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity12;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity13;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity14;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity15;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity16;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity17;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity18;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity2;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity3;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity4;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity5;
-//import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity8;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity9;
-import dk.komputerkomputer.helloworld.second_layer.Note_Func1;
+import dk.komputerkomputer.helloworld.NoteFuncs.Note_Func_First_Layer;
 
 @SuppressWarnings({"FieldMayBeFinal", "CanBeFinal"})
 public class MainActivity extends AppCompatActivity {
@@ -61,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //TODO:: complete this
 
-        //TODO Make all save methods try, catch
+        //TODO Find out what to do with these
 
-
+        //Assigning id's to all Edit texts in the app, so we can use them further down
 
         EditText noteTitle1 = findViewById(R.id.NoteTitle1);
         EditText noteTitle2 = findViewById(R.id.NoteTitle2);
@@ -86,127 +61,60 @@ public class MainActivity extends AppCompatActivity {
 
         TextView textView = findViewById(R.id.PPLink);
 
-        Note_Func1 note_func1 = new Note_Func1();
+        Note_Func_First_Layer note_func1 = new Note_Func_First_Layer();
 
         ScrollView sv = findViewById(R.id.scrl);
         sv.scrollTo(0, 1000);
 
         textView.setText(Html.fromHtml(
-                "&nbsp; "+
+                "&nbsp; " +
                         "<a href=\"http://207.154.228.165\">Privacy policy</a> " +
                         "created with xml and java in android studio++"));
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
-        try {
-            String file = "MainActivity1.1";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.2";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.3";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.4";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.5";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.6";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.7";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.8";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.9";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.10";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.11";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.12";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.13";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.14";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.15";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.16";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.17";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            String file = "MainActivity1.18";
-            noteTitle1.setText(note_func1.load(getApplicationContext(), file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        //Here all the fields on the Main Page get loaded from storage.
 
-        //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
+        noteTitle1.setText(note_func1.load(getApplicationContext(), "MainActivity1.1"));
+
+        noteTitle2.setText(note_func1.load(getApplicationContext(), "MainActivity1.2"));
+
+        noteTitle3.setText(note_func1.load(getApplicationContext(), "MainActivity1.3"));
+
+        noteTitle4.setText(note_func1.load(getApplicationContext(), "MainActivity1.4"));
+
+        noteTitle5.setText(note_func1.load(getApplicationContext(), "MainActivity1.5"));
+
+        noteTitle6.setText(note_func1.load(getApplicationContext(), "MainActivity1.6"));
+
+        noteTitle7.setText(note_func1.load(getApplicationContext(), "MainActivity1.7"));
+
+        noteTitle8.setText(note_func1.load(getApplicationContext(), "MainActivity1.8"));
+
+        noteTitle9.setText(note_func1.load(getApplicationContext(), "MainActivity1.9"));
+
+        noteTitle10.setText(note_func1.load(getApplicationContext(), "MainActivity1.10"));
+
+        noteTitle11.setText(note_func1.load(getApplicationContext(), "MainActivity1.11"));
+
+        noteTitle12.setText(note_func1.load(getApplicationContext(), "MainActivity1.12"));
+
+        noteTitle13.setText(note_func1.load(getApplicationContext(), "MainActivity1.13"));
+
+        noteTitle14.setText(note_func1.load(getApplicationContext(), "MainActivity1.14"));
+
+        noteTitle15.setText(note_func1.load(getApplicationContext(), "MainActivity1.15"));
+
+        noteTitle16.setText(note_func1.load(getApplicationContext(), "MainActivity1.16"));
+
+        noteTitle17.setText(note_func1.load(getApplicationContext(), "MainActivity1.17"));
+
+        noteTitle18.setText(note_func1.load(getApplicationContext(), "MainActivity1.18"));
+
+
+        // Here all listeners is set to listen for text change,
+        // and record it(save it to internal storage of the phone).
+        // It is allso here the program is sat to listen for
+        // long or doublepress for new activity start eg. enter a note.
 
         noteTitle1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -1002,311 +910,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    /*public void load1() {
-        EditText NoteTitle1 = findViewById(R.id.NoteTitle1);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.1")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle1.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load2() {
-        EditText NoteTitle2 = findViewById(R.id.NoteTitle2);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.2")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle2.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load3() {
-        EditText NoteTitle3 = findViewById(R.id.NoteTitle3);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.3")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle3.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load4() {
-        EditText NoteTitle4 = findViewById(R.id.NoteTitle4);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.4")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle4.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load5() {
-        EditText NoteTitle5 = findViewById(R.id.NoteTitle5);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.5")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle5.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load6() {
-        EditText NoteTitle6 = findViewById(R.id.NoteTitle6);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.6")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle6.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load7() {
-        EditText NoteTitle7 = findViewById(R.id.NoteTitle7);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.7")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle7.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load8() {
-        EditText NoteTitle8 = findViewById(R.id.NoteTitle8);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.8")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle8.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load9() {
-        EditText NoteTitle9 = findViewById(R.id.NoteTitle9);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.9")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle9.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load10() {
-        EditText NoteTitle10 = findViewById(R.id.NoteTitle10);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.10")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle10.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load11() {
-        EditText NoteTitle11 = findViewById(R.id.NoteTitle11);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.11")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle11.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load12() {
-        EditText NoteTitle12 = findViewById(R.id.NoteTitle12);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.12")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle12.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load13() {
-        EditText NoteTitle13 = findViewById(R.id.NoteTitle13);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.13")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle13.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load14() {
-        EditText NoteTitle14 = findViewById(R.id.NoteTitle14);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.14")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle14.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load15() {
-        EditText NoteTitle15 = findViewById(R.id.NoteTitle15);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.15")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle15.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load16() {
-        EditText NoteTitle16 = findViewById(R.id.NoteTitle16);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.16")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle16.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load17() {
-        EditText NoteTitle17 = findViewById(R.id.NoteTitle17);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.17")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle17.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load18() {
-        EditText NoteTitle18 = findViewById(R.id.NoteTitle18);
-        StringBuilder stringBuilder;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity1.18")));
-            String inputString;
-            stringBuilder = new StringBuilder();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuilder.append(inputString);
-            }
-            NoteTitle18.setText(stringBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
 }
+
 

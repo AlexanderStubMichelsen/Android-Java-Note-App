@@ -12,6 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
+import dk.komputerkomputer.helloworld.NoteFuncs.Note_Func_Second_Layer;
 import dk.komputerkomputer.helloworld.R;
 
 
@@ -26,7 +27,7 @@ public class MainActivity3 extends AppCompatActivity {
 
         EditText note = findViewById(R.id.note);
 
-        Note_Func note_func = new Note_Func();
+        Note_Func_Second_Layer note_func = new Note_Func_Second_Layer();
 
         String file = "MainActivity2.3";
 
