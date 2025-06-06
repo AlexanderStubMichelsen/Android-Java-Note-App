@@ -1,8 +1,5 @@
 package dk.komputerkomputer.helloworld.first_layer;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,617 +9,118 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
-import dk.komputerkomputer.helloworld.Note;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+
 import dk.komputerkomputer.helloworld.R;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity2;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity3;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity4;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity5;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
-import dk.komputerkomputer.helloworld.second_layer.MainActivity8;
+import dk.komputerkomputer.helloworld.second_layer.*;
 
 public class MainActivity extends AppCompatActivity {
+
+    private final int[] editTextIds = {
+            R.id.textView1mTwo,
+            R.id.textView2mTwo,
+            R.id.textView3mTwo,
+            R.id.textView4mTwo,
+            R.id.textView5mTwo,
+            R.id.textView6mTwo,
+            R.id.textView7mTwo
+    };
+
+    private final Class<?>[] activityClasses = {
+            MainActivity2.class,
+            MainActivity3.class,
+            MainActivity4.class,
+            MainActivity5.class,
+            MainActivity6.class,
+            MainActivity7.class,
+            MainActivity8.class
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //TODO:: complete this
 
-        try {
-            load();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load2();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load3();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load4();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load5();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load6();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            load7();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        for (int i = 0; i < editTextIds.length; i++) {
+            int index = i;
+            EditText editText = findViewById(editTextIds[i]);
+            String filename = "MainActivity" + (11 + i);
 
-        EditText editText = findViewById(R.id.textView1mTwo);
-        EditText editText2 = findViewById(R.id.textView2mTwo);
-        EditText editText3 = findViewById(R.id.textView3mTwo);
-        EditText editText4 = findViewById(R.id.textView4mTwo);
-        EditText editText5 = findViewById(R.id.textView5mTwo);
-        EditText editText6 = findViewById(R.id.textView6mTwo);
-        EditText editText7 = findViewById(R.id.textView7mTwo);
+            load(editText, filename);
 
+            setupEditText(editText, filename, () -> {
+                save(editText, filename);
+                enterNoteCollectionSpace(activityClasses[index]);
+            });
+        }
+    }
 
-        //TODO MAYBE MAKE LONGPRESS AND DOUBLETAP ACCESS NOTESPACES AND SINGLE CLICK EDIT AS NOW
-
+    private void setupEditText(EditText editText, String filename, Runnable onGestureAction) {
+        // Save on text change
         editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void afterTextChanged(Editable s) {}
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
+                save(editText, filename);
             }
         });
 
-        editText.setOnTouchListener(new View.OnTouchListener() {
-            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
-
-                @Override
-                public void onLongPress(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace();
-                    super.onLongPress(e);
-                }
-
-                @Override
-                public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace();
-                    return super.onDoubleTap(e);
-                }
-            });
+        // Gesture detection
+        GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public void onLongPress(@NonNull MotionEvent e) {
+                Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                onGestureAction.run();
+            }
 
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return false;
+            public boolean onDoubleTap(@NonNull MotionEvent e) {
+                Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                onGestureAction.run();
+                return true;
             }
         });
 
-        editText2.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save2();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        editText2.setOnTouchListener(new View.OnTouchListener() {
-            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
-
-                @Override
-                public void onLongPress(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace2();
-                    super.onLongPress(e);
-                }
-
-                @Override
-                public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace2();
-                    return super.onDoubleTap(e);
-                }
-            });
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return false;
-            }
-        });
-
-        editText3.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save3();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        editText3.setOnTouchListener(new View.OnTouchListener() {
-            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
-
-                @Override
-                public void onLongPress(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace3();
-                    super.onLongPress(e);
-                }
-
-                @Override
-                public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace3();
-                    return super.onDoubleTap(e);
-                }
-            });
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return false;
-            }
-        });
-
-        editText4.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save4();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        editText4.setOnTouchListener(new View.OnTouchListener() {
-            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
-
-                @Override
-                public void onLongPress(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace4();
-                    super.onLongPress(e);
-                }
-
-                @Override
-                public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace4();
-                    return super.onDoubleTap(e);
-                }
-            });
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return false;
-            }
-        });
-
-        editText5.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save5();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        editText5.setOnTouchListener(new View.OnTouchListener() {
-            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
-
-                @Override
-                public void onLongPress(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace5();
-                    super.onLongPress(e);
-                }
-
-                @Override
-                public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace5();
-                    return super.onDoubleTap(e);
-                }
-            });
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return false;
-            }
-        });
-
-        editText6.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save6();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        editText6.setOnTouchListener(new View.OnTouchListener() {
-            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
-
-                @Override
-                public void onLongPress(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace6();
-                    super.onLongPress(e);
-                }
-
-                @Override
-                public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace6();
-                    return super.onDoubleTap(e);
-                }
-            });
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return false;
-            }
-        });
-
-        editText7.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                save7();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        editText7.setOnTouchListener(new View.OnTouchListener() {
-            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
-
-                @Override
-                public void onLongPress(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace7();
-                    super.onLongPress(e);
-                }
-
-                @Override
-                public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                    enterNoteCollectionSpace7();
-                    return super.onDoubleTap(e);
-                }
-            });
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return false;
-            }
+        editText.setOnTouchListener((v, event) -> {
+            gestureDetector.onTouchEvent(event);
+            return false;
         });
     }
 
-    //TODO Make Interface
-
-    //TODO WRITE METHOD REFRESH
-
-    //TODO MAKE SAVE ON LONGPRESS DOUBLETAP WHILST CHANGING SCREEN
-
-    public void enterNoteCollectionSpace() {
-        Intent secondActivityIntent = new Intent(this, MainActivity2.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNoteCollectionSpace2() {
-        Intent secondActivityIntent = new Intent(this, MainActivity3.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNoteCollectionSpace3() {
-        Intent secondActivityIntent = new Intent(this, MainActivity4.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNoteCollectionSpace4() {
-        Intent secondActivityIntent = new Intent(this, MainActivity5.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNoteCollectionSpace5() {
-        Intent secondActivityIntent = new Intent(this, MainActivity6.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNoteCollectionSpace6() {
-        Intent secondActivityIntent = new Intent(this, MainActivity7.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void enterNoteCollectionSpace7() {
-        Intent secondActivityIntent = new Intent(this, MainActivity8.class);
-        startActivity(secondActivityIntent);
-    }
-
-    public void save() {
-        EditText edtEmTwo = findViewById(R.id.textView1mTwo);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity11", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
-            fos.close();
+    private void save(EditText editText, String filename) {
+        try (FileOutputStream fos = openFileOutput(filename, Context.MODE_PRIVATE)) {
+            fos.write(editText.getText().toString().getBytes());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void save2() {
-        EditText edtEmTwo = findViewById(R.id.textView2mTwo);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity12", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
-            fos.close();
+    private void load(EditText editText, String filename) {
+        try (FileInputStream fis = openFileInput(filename);
+             InputStreamReader isr = new InputStreamReader(fis);
+             BufferedReader br = new BufferedReader(isr)) {
+            StringBuilder sb = new StringBuilder();
+            String text;
+            while ((text = br.readLine()) != null) {
+                sb.append(text);
+            }
+            editText.setText(sb.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void save3() {
-        EditText edtEmTwo = findViewById(R.id.textView3mTwo);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity13", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save4() {
-        EditText edtEmTwo = findViewById(R.id.textView4mTwo);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity14", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save5() {
-        EditText edtEmTwo = findViewById(R.id.textView5mTwo);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity15", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save6() {
-        EditText edtEmTwo = findViewById(R.id.textView6mTwo);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity16", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void save7() {
-        EditText edtEmTwo = findViewById(R.id.textView7mTwo);
-        try {
-            FileOutputStream fos = openFileOutput("MainActivity17", Context.MODE_PRIVATE);
-            fos.write(edtEmTwo.getText().toString().getBytes());
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load() {
-        EditText edtEmTwo = findViewById(R.id.textView1mTwo);
-        StringBuffer stringBuffer = null;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity11")));
-            String inputString;
-            stringBuffer = new StringBuffer();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
-            }
-            edtEmTwo.setText(stringBuffer.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load2() {
-        EditText edtEmTwo = findViewById(R.id.textView2mTwo);
-        StringBuffer stringBuffer = null;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity12")));
-            String inputString;
-            stringBuffer = new StringBuffer();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
-            }
-            edtEmTwo.setText(stringBuffer.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load3() {
-        EditText edtEmTwo = findViewById(R.id.textView3mTwo);
-        StringBuffer stringBuffer = null;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity13")));
-            String inputString;
-            stringBuffer = new StringBuffer();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
-            }
-            edtEmTwo.setText(stringBuffer.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load4() {
-        EditText edtEmTwo = findViewById(R.id.textView4mTwo);
-        StringBuffer stringBuffer = null;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity14")));
-            String inputString;
-            stringBuffer = new StringBuffer();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
-            }
-            edtEmTwo.setText(stringBuffer.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load5() {
-        EditText edtEmTwo = findViewById(R.id.textView5mTwo);
-        StringBuffer stringBuffer = null;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity15")));
-            String inputString;
-            stringBuffer = new StringBuffer();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
-            }
-            edtEmTwo.setText(stringBuffer.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load6() {
-        EditText edtEmTwo = findViewById(R.id.textView6mTwo);
-        StringBuffer stringBuffer = null;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity16")));
-            String inputString;
-            stringBuffer = new StringBuffer();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
-            }
-            edtEmTwo.setText(stringBuffer.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void load7() {
-        EditText edtEmTwo = findViewById(R.id.textView7mTwo);
-        StringBuffer stringBuffer = null;
-        try {
-            BufferedReader inputReader = new BufferedReader(new InputStreamReader(
-                    openFileInput("MainActivity17")));
-            String inputString;
-            stringBuffer = new StringBuffer();
-            while ((inputString = inputReader.readLine()) != null) {
-                stringBuffer.append(inputString);
-            }
-            edtEmTwo.setText(stringBuffer.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private void enterNoteCollectionSpace(Class<?> activityClass) {
+        Intent intent = new Intent(this, activityClass);
+        startActivity(intent);
     }
 }
-
