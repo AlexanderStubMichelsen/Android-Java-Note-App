@@ -1,4 +1,4 @@
-package dk.komputerkomputer.helloworld;
+package online.devdisplay.ONotes;
 
 public class NoteCollectionSpace {
 

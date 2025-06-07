@@ -1,4 +1,4 @@
-package dk.komputerkomputer.helloworld.second_layer;
+package online.devdisplay.ONotes.second_layer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +10,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -19,8 +18,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import dk.komputerkomputer.helloworld.R;
-import dk.komputerkomputer.helloworld.first_layer.MainActivity;
+import online.devdisplay.ONotes.R;
+import online.devdisplay.ONotes.first_layer.MainActivity;
 
 public class MainActivity7 extends AppCompatActivity {
 

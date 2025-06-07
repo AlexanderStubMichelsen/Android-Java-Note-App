@@ -7,7 +7,7 @@
     android:background="#4A4545"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".first_layer.MainActivity">
+    tools:context="online.devdisplay.ONotes.first_layer.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -83,5 +83,18 @@
         android:textColor="#00BCD4"
         android:textColorHint="#00BCD4"
         android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/privacyPolicyLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Læs vores privatlivspolitik"
+        android:textColor="@color/purple_500"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        />
+
 
 </LinearLayout>

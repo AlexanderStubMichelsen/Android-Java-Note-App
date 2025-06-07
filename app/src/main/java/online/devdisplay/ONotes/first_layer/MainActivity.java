@@ -1,14 +1,15 @@
-package dk.komputerkomputer.helloworld.first_layer;
+package online.devdisplay.ONotes.first_layer;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,8 +20,15 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 
-import dk.komputerkomputer.helloworld.R;
-import dk.komputerkomputer.helloworld.second_layer.*;
+import online.devdisplay.ONotes.second_layer.MainActivity2;
+import online.devdisplay.ONotes.second_layer.MainActivity3;
+import online.devdisplay.ONotes.second_layer.MainActivity4;
+import online.devdisplay.ONotes.second_layer.MainActivity5;
+import online.devdisplay.ONotes.second_layer.MainActivity6;
+import online.devdisplay.ONotes.second_layer.MainActivity7;
+import online.devdisplay.ONotes.second_layer.MainActivity8;
+import online.devdisplay.ONotes.R;
+import online.devdisplay.ONotes.second_layer.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
                 enterNoteCollectionSpace(activityClasses[index]);
             });
         }
+
+        setupPrivacyPolicyLink();
     }
 
     private void setupEditText(EditText editText, String filename, Runnable onGestureAction) {
@@ -122,5 +132,15 @@ public class MainActivity extends AppCompatActivity {
     private void enterNoteCollectionSpace(Class<?> activityClass) {
         Intent intent = new Intent(this, activityClass);
         startActivity(intent);
+    }
+
+    private void setupPrivacyPolicyLink() {
+        TextView privacyLink = findViewById(R.id.privacyPolicyLink);
+        final String privacyUrl = "https://devdisplay.online/privacypolicy"; // <-- Put your actual privacy policy URL here
+
+        privacyLink.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(privacyUrl));
+            startActivity(browserIntent);
+        });
     }
 }

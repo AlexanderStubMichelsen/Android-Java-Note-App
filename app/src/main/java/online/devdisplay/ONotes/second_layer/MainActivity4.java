@@ -1,4 +1,4 @@
-package dk.komputerkomputer.helloworld.second_layer;
+package online.devdisplay.ONotes.second_layer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +10,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -19,22 +18,23 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import dk.komputerkomputer.helloworld.R;
-import dk.komputerkomputer.helloworld.first_layer.MainActivity;
+import online.devdisplay.ONotes.R;
+import online.devdisplay.ONotes.first_layer.MainActivity;
 
-public class MainActivity6 extends AppCompatActivity {
+public class MainActivity4 extends AppCompatActivity {
 
     private EditText edtEmTwo;
-    private static final String FILENAME = "MainActivity6";
+    private static final String FILENAME = "MainActivity4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main6);
+        setContentView(R.layout.activity_main4);
 
         edtEmTwo = findViewById(R.id.edtEmTwo);
         load();
 
+        // Save on text change
         edtEmTwo.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override public void afterTextChanged(Editable s) {}
@@ -46,18 +46,19 @@ public class MainActivity6 extends AppCompatActivity {
             }
         });
 
+        // Gesture detection
         GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public void onLongPress(@NonNull MotionEvent e) {
                 Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                save();
+                save(); // Save before navigating
                 enterNoteFrontPage();
             }
 
             @Override
             public boolean onDoubleTap(@NonNull MotionEvent e) {
                 Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                save();
+                save(); // Save before navigating
                 enterNoteFrontPage();
                 return true;
             }
@@ -67,6 +68,8 @@ public class MainActivity6 extends AppCompatActivity {
             gestureDetector.onTouchEvent(event);
             return false;
         });
+
+        // TODO: Add a button to navigate back, or handle system back press if needed
     }
 
     private void enterNoteFrontPage() {
