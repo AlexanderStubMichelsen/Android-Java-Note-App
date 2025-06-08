@@ -7,7 +7,7 @@
     android:background="#4A4545"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="online.devdisplay.ONotes.second_layer.MainActivity4">
+    tools:context="dk.komputerkomputer.helloworld.second_layer.MainActivity4">
 
     <ImageView
         android:id="@+id/imageView"

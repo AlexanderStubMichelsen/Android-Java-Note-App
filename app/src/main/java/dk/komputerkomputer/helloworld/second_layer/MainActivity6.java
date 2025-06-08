@@ -1,4 +1,4 @@
-package online.devdisplay.ONotes.second_layer;
+package dk.komputerkomputer.helloworld.second_layer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,21 +18,20 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import online.devdisplay.ONotes.R;
-import online.devdisplay.ONotes.first_layer.MainActivity;
+import dk.komputerkomputer.helloworld.R;
+import dk.komputerkomputer.helloworld.first_layer.MainActivity;
 
-public class MainActivity8 extends AppCompatActivity {
+public class MainActivity6 extends AppCompatActivity {
 
     private EditText edtEmTwo;
-    private static final String FILENAME = "MainActivity8";
+    private static final String FILENAME = "MainActivity6";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main8);
+        setContentView(R.layout.activity_main6);
 
         edtEmTwo = findViewById(R.id.edtEmTwo);
-
         load();
 
         edtEmTwo.addTextChangedListener(new TextWatcher() {

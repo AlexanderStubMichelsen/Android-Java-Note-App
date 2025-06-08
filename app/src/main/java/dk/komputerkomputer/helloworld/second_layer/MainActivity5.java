@@ -1,4 +1,4 @@
-package online.devdisplay.ONotes.second_layer;
+package dk.komputerkomputer.helloworld.second_layer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,23 +18,22 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import online.devdisplay.ONotes.R;
-import online.devdisplay.ONotes.first_layer.MainActivity;
+import dk.komputerkomputer.helloworld.R;
+import dk.komputerkomputer.helloworld.first_layer.MainActivity;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity5 extends AppCompatActivity {
 
     private EditText edtEmTwo;
-    private static final String FILENAME = "MainActivity2";
+    private static final String FILENAME = "MainActivity5";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main5);
 
         edtEmTwo = findViewById(R.id.edtEmTwo);
         load();
 
-        // Save on text change
         edtEmTwo.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override public void afterTextChanged(Editable s) {}
@@ -46,19 +45,18 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
-        // Set gesture detection
         GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public void onLongPress(@NonNull MotionEvent e) {
                 Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
-                save(); // Ensure save before transition
+                save();
                 enterNoteFrontPage();
             }
 
             @Override
             public boolean onDoubleTap(@NonNull MotionEvent e) {
                 Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
-                save(); // Ensure save before transition
+                save();
                 enterNoteFrontPage();
                 return true;
             }
@@ -69,7 +67,7 @@ public class MainActivity2 extends AppCompatActivity {
             return false;
         });
 
-        // TODO: Add a button to go back to MainActivity manually (in layout and here).
+        // TODO: Add a back button for better UX if needed
     }
 
     private void enterNoteFrontPage() {

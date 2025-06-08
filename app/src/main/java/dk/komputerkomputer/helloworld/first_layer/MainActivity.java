@@ -1,4 +1,4 @@
-package online.devdisplay.ONotes.first_layer;
+package dk.komputerkomputer.helloworld.first_layer;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,15 +20,14 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 
-import online.devdisplay.ONotes.second_layer.MainActivity2;
-import online.devdisplay.ONotes.second_layer.MainActivity3;
-import online.devdisplay.ONotes.second_layer.MainActivity4;
-import online.devdisplay.ONotes.second_layer.MainActivity5;
-import online.devdisplay.ONotes.second_layer.MainActivity6;
-import online.devdisplay.ONotes.second_layer.MainActivity7;
-import online.devdisplay.ONotes.second_layer.MainActivity8;
-import online.devdisplay.ONotes.R;
-import online.devdisplay.ONotes.second_layer.*;
+import dk.komputerkomputer.helloworld.R;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity2;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity3;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity4;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity5;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity6;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity7;
+import dk.komputerkomputer.helloworld.second_layer.MainActivity8;
 
 public class MainActivity extends AppCompatActivity {
 

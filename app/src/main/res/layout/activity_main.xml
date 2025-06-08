@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4A4545"
-    tools:context="online.devdisplay.ONotes.first_layer.MainActivity">
+    tools:context="dk.komputerkomputer.helloworld.first_layer.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package online.devdisplay.ONotes;
+package dk.komputerkomputer.helloworld;
 
 import android.content.Context;
 

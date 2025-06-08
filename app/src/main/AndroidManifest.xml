@@ -11,50 +11,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld"
-        tools:targetApi="36">
+        tools:targetApi="34">
         <activity
-            android:name="online.devdisplay.ONotes.second_layer.MainActivity8"
+            android:name="dk.komputerkomputer.helloworld.second_layer.MainActivity8"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="online.devdisplay.ONotes.second_layer.MainActivity7"
+            android:name="dk.komputerkomputer.helloworld.second_layer.MainActivity7"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="online.devdisplay.ONotes.second_layer.MainActivity6"
+            android:name="dk.komputerkomputer.helloworld.second_layer.MainActivity6"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="online.devdisplay.ONotes.second_layer.MainActivity5"
+            android:name="dk.komputerkomputer.helloworld.second_layer.MainActivity5"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="online.devdisplay.ONotes.first_layer.MainActivity"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="online.devdisplay.ONotes.second_layer.MainActivity2"
+            android:name="dk.komputerkomputer.helloworld.first_layer.MainActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -67,7 +54,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="online.devdisplay.ONotes.second_layer.MainActivity3"
+            android:name="dk.komputerkomputer.helloworld.second_layer.MainActivity2"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -80,7 +67,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="online.devdisplay.ONotes.second_layer.MainActivity4"
+            android:name="dk.komputerkomputer.helloworld.second_layer.MainActivity3"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -93,111 +80,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".third_layer.MainActivity5"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".third_layer.MainActivity6"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".third_layer.MainActivity7"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".third_layer.MainActivity8"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".third_layer.MainActivity9"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".third_layer.MainActivity10"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".third_layer.MainActivity11"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".third_layer.MainActivity12"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".third_layer.MainActivity13"
+            android:name="dk.komputerkomputer.helloworld.second_layer.MainActivity4"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
