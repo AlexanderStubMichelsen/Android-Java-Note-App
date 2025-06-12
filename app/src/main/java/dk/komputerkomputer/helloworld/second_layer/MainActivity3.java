@@ -42,7 +42,7 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 save();
-                Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -50,14 +50,14 @@ public class MainActivity3 extends AppCompatActivity {
         GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public void onLongPress(@NonNull MotionEvent e) {
-                Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
                 save(); // Save before transition
                 enterNoteFrontPage();
             }
 
             @Override
             public boolean onDoubleTap(@NonNull MotionEvent e) {
-                Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Double Tap", Toast.LENGTH_SHORT).show();
                 save(); // Save before transition
                 enterNoteFrontPage();
                 return true;

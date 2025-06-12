@@ -9,12 +9,6 @@
     android:padding="16dp"
     tools:context="dk.komputerkomputer.helloworld.second_layer.MainActivity7">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/notesicon" />
-
     <EditText
         android:id="@+id/edtEmTwo"
         android:layout_width="match_parent"
