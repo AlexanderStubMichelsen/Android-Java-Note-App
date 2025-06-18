@@ -9,9 +9,11 @@ import android.text.TextWatcher;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -56,6 +58,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // Find the icon inside the toolbar and set a click listener
+        ImageView toolbarIcon = findViewById(R.id.toolbar_icon);
+        toolbarIcon.setOnClickListener(v -> {
+            Toast.makeText(this, "Happy noting!", Toast.LENGTH_SHORT).show();
+            // You can replace this with your own action, e.g., open settings
+        });
+
         for (int i = 0; i < editTextIds.length; i++) {
             int index = i;
             EditText editText = findViewById(editTextIds[i]);
@@ -71,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupPrivacyPolicyLink();
     }
+
 
     private void setupEditText(EditText editText, String filename, Runnable onGestureAction) {
         // Save on text change
